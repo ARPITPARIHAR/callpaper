@@ -40,7 +40,7 @@
 							<a class="nav-link" href="#plans">Plans</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link btn btn-success" href="#contact">174-394-9560</a>
+							<a class="nav-link" href="#contact">Contact</a>
 						</li>
 					</ul>
 				</div>

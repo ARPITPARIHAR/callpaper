@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 
@@ -15,5 +16,6 @@ use App\Http\Controllers\ContactController;
 |
 */
 Route::get('/', [HomeController::class, 'home']);
-Route::post('/submit-form', [ContactController::class, 'submitForm'])->name('submit.form');
+Route::post('/submit-form', [ContactController::class, 'store'])->name('submit.form');
+Route::post('/submit-article', [FormController::class, 'store'])->name('submit.article');
 

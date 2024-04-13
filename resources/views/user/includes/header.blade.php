@@ -107,8 +107,7 @@
         </div>
     </div>
 </section>
-<section class="our-projects" id="projects">
-    <div class="container">
+    {{-- <div class="container">
         <div class="row mb-5">
             <div class="col-sm-12">
                 <div class="d-sm-flex justify-content-between align-items-center mb-2">
@@ -166,7 +165,7 @@
                 <img src="images/carousel/slider5.jpg" alt="slider">
             </div>
         </div>
-    </div>
+    </div> --}}
     <div class="container">
         <div class="row pt-5 mt-5 pb-5 mb-5">
             <div class="col-sm-3">
@@ -364,6 +363,81 @@
         </div>
     </div>
 </section>
+
+<section class="our-projects" id="projects">
+
+<section class="clients pt-5 mt-5" data-aos="fade-up" data-aos-offset="-200" >
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="images/paper.png" alt="contact" class="img-fluid" style="margin-top:200px;">
+       
+        </div>
+        <div class="col-md-8">
+            <div class="border p-4" style="border-radius: 10px; border: 1px solid #000000 !important;">
+                <h4 style="text-align: center;">Submit Your Article</h4>
+                
+                <form action="{{ route('submit.article') }}"  enctype="multipart/form-data" method="post" style="display: flex; flex-direction: column;">
+                    @csrf
+                    <div class="custom-form-group">
+                        <label for="article">Sections:</label>
+                        <select id="article" name="article" class="file-input" required>
+                            <option value="">Select </option>
+                            <option value="article">Articles</option>
+                          
+                        </select>
+                    </div>
+                    
+
+                    <div class="custom-form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title" class="file-input" required>
+                    </div>
+                    <div class="custom-form-group">
+                        <label for="abstract">Abstract:</label>
+                        <textarea id="abstract" name="abstract" class="file-input" rows="2" required></textarea>
+                    </div>
+                    <div class="custom-form-group">
+                        <label for="keywords">Keywords:</label>
+                        <input type="text" id="keywords" name="keywords" class="file-input" required>
+                    </div>
+                    <div class="custom-form-group">
+                        <label for="reference">References:</label>
+                        <textarea id="reference" name="reference" class="file-input" rows="2"></textarea>
+                    </div>
+                    <div class="custom-form-group">
+                        <label for="author">Author Name:</label>
+                        <input type="text" id="author" name="author" class="file-input" required>
+                    </div>
+                    <div class="custom-form-group">
+                        <label for="galleys">Galleys:</label>
+                        <input type="file" id="galleys" name="galleys" class="file-input" style="border-style: none !important;" accept="application/pdf">
+                    </div>
+                    <div class="custom-form-group">
+                        <label for="galleys">Issue:</label>
+                        <input type="text" id="galleys" name="issue" class="file-input" style="border-style: none !important;" accept="application/pdf">
+                    </div>
+                    <div class="custom-form-group">
+                        <label for="page">Page Number:</label>
+                        <input type="text" id="page" name="page" class="file-input">
+                    </div>
+                    <div class="button-container">
+                        <input type="submit" value="Save" class="button">
+                        <input type="reset" value="Cancel" class="cancel-button">
+                    </div>
+                    
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
 <section class="contactus" id="contact">
     <div class="container">
         <div class="row mb-5 pb-5">
@@ -372,38 +446,41 @@
             </div>
             <div class="col-sm-7" data-aos="fade-up" data-aos-offset="-500">
                 <h3 class="font-weight-medium text-dark mt-5 mt-lg-0">Got A Problem</h3>
-                <h5 class="text-dark mb-5">Lorem ipsum dolor sit amet, consectetur pretium</h5>
-               <!-- View file -->
-<form method="POST" action="{{ route('submit.form') }}">
-    @csrf
-    <div class="row">
+                <h5 class="text-dark mb-5">Feel Free Text Us</h5>
+             
+               <form method="POST" action="{{ route('submit.form') }}" id="your-form-id">
+                @csrf
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Name">
+                            @error('name')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Email">
+                            @error('email')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" placeholder="Message"></textarea>
+                            @error('message')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
 
-    <div class="col-sm-6">
-    <div class="form-group">
-        <input type="text" name="name" class="form-control" placeholder="Name">
-        @error('name')
-            <div class="text-danger">{{ $message }}</div>
-        @enderror
-    </div>
-    </div>
-    <div class="col-sm-6">
-    <div class="form-group">
-        <input type="email" name="mail" class="form-control" placeholder="Email">
-        @error('mail')
-            <div class="text-danger">{{ $message }}</div>
-        @enderror
-    </div>
-    </div>
-    <div class="col-sm-12">
-    <div class="form-group">
-        <textarea name="message" class="form-control" placeholder="Message"></textarea>
-        @error('message')
-            <div class="text-danger">{{ $message }}</div>
-        @enderror
-    </div>
-</div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+            </form>
+            
 </div>
             </div>
         </div>
@@ -415,6 +492,186 @@
 
 <style>
 .form-control {
-    border: 3px dashed #ff0000 !important;
+    border: 2px dashed #681010 !important;
 }
 </style>
+
+
+{{-- <script>
+    document.getElementById('your-form-id').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevents default form submission behavior
+        restoreScrollPosition(); // Restores scroll position after form submission
+    });
+</script> --}}
+<style>
+    .border {
+  
+}
+/* Hide the default file input text */
+/* Hide the default file input text */
+.file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+/* Style the custom file input text */
+.file-input::before {
+    content: 'Choose File'; /* Text for the custom file input */
+    display: inline-block;
+    padding: 10px;
+    background-color: #fff;  /* Button background color */
+    color: #000 /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 10px; /* Button border radius */
+    cursor: pointer;
+}
+
+/* Style the "No file chosen" text */
+
+
+/* Hover effect for the custom file input text */
+.file-input:hover::before {
+    background-color: #cb0000;
+    color:white; /* Button background color on hover */
+}
+
+
+
+   .custom-form-group {
+    margin-bottom: 20px; /* Custom margin */
+    border: 1px solid #ced4da; /* Border for the custom form group */
+    border-radius: 10px; /* Border radius */
+    padding: 15px; /* Padding inside the custom form group */
+}
+
+.custom-form-group label {
+    /* Make label text bold */
+}
+
+.custom-form-group input[type="text"],
+.custom-form-group input[type="file"],
+.custom-form-group textarea {
+    border: 1px solid #ced4da; /* Border for input and textarea fields */
+    border-radius: 5px; /* Border radius */
+    padding: 8px; /* Padding for input and textarea fields */
+}
+
+.custom-form-group input[type="text"]:focus,
+.custom-form-group input[type="file"]:focus,
+.custom-form-group textarea:focus {
+    outline: none; /* Remove focus outline */
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5); /* Add box shadow on focus */
+}
+
+.custom-form-group input[type="file"] {
+    padding: 5px; /* Padding for file input field */
+}
+
+.custom-form-group .btn {
+    background-color: #007bff; /* Button background color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Button border radius */
+    padding: 10px 20px; /* Button padding */
+    color: #fff; /* Button text color */
+    cursor: pointer; /* Change cursor to pointer on button */
+}
+
+.custom-form-group .btn:hover {
+    background-color: #0056b3; /* Button background color on hover */
+}
+
+.button-container {
+    text-align: center; /* Center align the buttons */
+}
+
+.button, .cancel-button {
+    background-color: black; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 15px; /* Button border radius */
+    padding: 10px 20px; /* Button padding */
+    cursor: pointer; /* Change cursor to pointer on button */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    margin-right: 10px; /* Add some space between buttons */
+    width: 100px; /* Set button width */
+}
+
+.cancel-button {
+    background-color: red; /* Cancel button background color */
+}
+
+.button:hover, .cancel-button:hover {
+    background-color: #245d0a; /* Button background color on hover */
+}
+
+
+.custom-file-input {
+    border-style: none !important; /* Remove default border */
+    /* Add any other custom styles here */
+    width: 100%; /* Set width to 100% */
+}
+
+.file-input {
+    border: none !important; /* Remove default border */
+    padding: 10px; /* Add padding for better appearance */
+    background-color: #5abbcb; /* Add background color */
+    border-radius: 5px; /* Add border radius */
+    width: 100%;
+    line-height: 1.8;/* Set width to 100% */
+}
+
+
+
+.file-input:hover {
+    background-color: #f8e649; /* Change background color on hover */
+}
+
+.file-input:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5); /* Add box shadow on focus */
+}
+
+</style>
+{{-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("submitForm");
+
+        if (form) {
+            form.addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent form submission
+
+                // Scroll to the beginning of the form section
+                const formSection = document.getElementById("projects");
+                if (formSection) {
+                    formSection.scrollIntoView({ behavior: "smooth" });
+                }
+
+                // Optionally, you can submit the form using AJAX
+                // Here's a simple example using Fetch API
+                fetch(form.action, {
+                    method: form.method,
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    // Handle response as needed
+                    console.log(response);
+                })
+                .catch(error => {
+                    // Handle error as needed
+                    console.error('Error:', error);
+                });
+            });
+        }
+    });
+</script> --}}
+@if(session('success') && session('scrollToForm'))
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Scroll to the beginning of the form section
+        const formSection = document.getElementById("projects");
+        if (formSection) {
+            formSection.scrollIntoView({ behavior: "smooth" });
+        }
+    });
+</script>
+@endif

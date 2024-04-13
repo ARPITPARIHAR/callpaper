@@ -40,9 +40,15 @@
                             </ul>
                         </div>
                         <div class="col-sm-8">
-                            <h6 class="footer-title" style="color:white; font-size:24px; margin-left:80px;">Via Map</h6>
-                            
-                        </div>
+                            <h6 class="footer-title" style="color:white; font-size:24px; margin-left:90px;">Via Map</h6>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d220.18644260501418!2d73.34259678603189!3d27.994414007983714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1687893595114!5m2!1sen!2sin" 
+        frameborder="0" 
+        allowfullscreen="" 
+        width="400" 
+        height="200">
+</iframe>
+
+                       </div>
                         
                     </div>
                 </div>
