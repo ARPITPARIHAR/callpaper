@@ -4,14 +4,15 @@
 		<!-- Required meta tags --> 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Marshmallow Bootstrap Admin Dashboard Template</title>
+		<title>ScholarlyPublishinghelp</title>
 		
 	</head>
 	<body data-spy="scroll" data-target=".navbar" data-offset="50">
 		<div id="mobile-menu-overlay"></div>
 		<nav class="navbar navbar-expand-lg fixed-top">
 			<div class="container">
-				<a class="navbar-brand" href="#"><img src="images/logo.svg" alt="Marshmallow"></a>
+				<a class="navbar-brand" style="margin-left: -50px;" href="https://scholarlypublishinghelp.com/">Scholarly Publishing Help</a>
+
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"><i class="mdi mdi-menu"> </i></span>
 				</button>
@@ -30,15 +31,14 @@
 						<li class="nav-item">
 							<a class="nav-link" href="#about">About</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#projects">Projects</a>
+                       
+						 <li class="nav-item">
+							<a class="nav-link" href="#choose">Why Choose US</a>
+						</li> 
+                        <li class="nav-item">
+							<a class="nav-link" href="#paper">Submit Paper</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#testimonial">Testimonial</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#plans">Plans</a>
-						</li>
+						
 						<li class="nav-item">
 							<a class="nav-link" href="#contact">Contact</a>
 						</li>
@@ -47,36 +47,30 @@
 			</div>
 		</nav>
 		<div class="page-body-wrapper">
-			<section id="home" class="home">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="main-banner">
-								<div class="d-sm-flex justify-content-between">
-									<div data-aos="zoom-in-up">
-										<div class="banner-title">
-												<h3 class="font-weight-medium">We Help Power
-												Millions Of Businesses 
-												in 100+ Countries
-											</h3>
-										</div>
-										<p class="mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-
-											<br>
-											Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-										</p>
-										<a href="#" class="btn btn-secondary mt-3">Learn more</a>
-									</div>
-									<div class="mt-5 mt-lg-0">
-										<img src="images/group.png" alt="marsmello" class="img-fluid" data-aos="zoom-in-up">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
+            <section id="home" class="home">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="main-banner">
+                                <div class="d-sm-flex justify-content-between">
+                                    <div data-aos="zoom-in-up">
+                                        <div class="banner-title">
+                                            <h3 class="font-weight-medium">Empowering Academic Publishing</h3>
+                                        </div>
+                                        <p class="mt-3">Unlock the potential of your research with our comprehensive publishing solutions. We provide tailored support to researchers and academics, helping them navigate the complexities of academic publishing and maximize the impact of their work.</p>
+                                        <a href="#" class="btn btn-secondary mt-3">Explore Our Services</a>
+                                    </div>
+                                    <div class="mt-5 mt-lg-0">
+                                        <img src="images/publish1.jpg" alt="academic-publishing" class="img-fluid" data-aos="zoom-in-up">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
             <style>
             .nav-link {
                 font-size: 18px !important; /* Font size ko 28px set kiya gaya hai */

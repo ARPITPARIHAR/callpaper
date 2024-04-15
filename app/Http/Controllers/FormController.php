@@ -36,7 +36,8 @@ class FormController extends Controller
         $form->page = $request->page;
         $form->save();
         // dd('Form data saved successfully.');
-        return redirect()->back()->with('success', 'Form submitted successfully!')->with('scrollToForm', true);
+        return redirect()->back()->with('success', 'Form submitted successfully!')->with('scrollToProjectForm', true);
+
 
     }
 }
