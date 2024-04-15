@@ -17,18 +17,18 @@ class ContactController extends Controller
             'email' => 'required|email',
             'message' => 'required',
         ]);
-
+    
         $contact = new Contact();
         $contact->name = $request->name;
         $contact->email = $request->email;
         $contact->message = $request->message;
-
+    
         if ($contact->save()) {
             // Send email notification
             Mail::to('ankurparihar111@gmail.com')->send(new ContactFormSubmitted($contact));
-
-            // Redirect to a thank you page after successful submission
-            return Redirect::route('thank-you')->with('contactSuccess', 'Form submitted successfully!');
+    
+            // Redirect back to the same page with success message
+            return Redirect::back()->with('contactSuccess', 'Form submitted successfully!')->withInput();
         } else {
             // Validation errors, redirect with error message and keep form data pre-filled
             return redirect()->back()->withErrors(['message' => 'Validation errors occurred. Please check your input.'])
@@ -37,5 +37,3 @@ class ContactController extends Controller
         }
     }
 }
-
-
