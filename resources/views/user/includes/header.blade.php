@@ -1,47 +1,46 @@
 <section class="our-services" id="services">
     <div class="container">
-        <div class="row justify-content-center"> <!-- Changed here -->
-            <div class="col-sm-12">
-                <h5 class="text-dark text-uppercase mb-4" style="font-size: 24px; text-align: center;">Discover Our Services</h5>
-
-                
+        <div class="row justify-content-center">
+            <div class="col-sm-12 text-center"> <!-- Updated -->
+               <h5 class="text-dark text-uppercase mb-4" style="font-size: 24px; border-radius: 50%; padding: 10px 20px;">Discover Our Services</h5>
             </div>
         </div>
         <div class="row" data-aos="fade-up">
-            <div class="col-sm-6 text-center text-lg-left">
+            <div class="col-sm-6 text-center text-lg-left"> <!-- Updated -->
                 <div class="services-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                     <i class="fas fa-newspaper newspaper-icon" alt="integrated-marketing" data-aos="zoom-in"></i>
                     <h5 class="text-dark mb-3 mt-4 font-weight-medium">Journal Publication Support:</h5>
-                    <p style="font-size: 18px; font-family:math;color:#f51127;">Our experienced team is dedicated to guiding you through every step of the journal publication process. From manuscript preparation to submission, peer review, and final publication, we offer personalized assistance to ensure your work meets the highest standards of academic excellence.</p>
+                    <p style="font-size: 18px; font-family:math;color:#f51127; text-align: left;">Our experienced team is dedicated to guiding you through every step of the journal publication process. From manuscript preparation to submission, peer review, and final publication, we offer personalized assistance to ensure your work meets the highest standards of academic excellence.</p>
                 </div>
             </div>
-            <div class="col-sm-6 text-center text-lg-left">
+            <div class="col-sm-6 text-center text-lg-left"> <!-- Updated -->
                 <div class="services-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                     <i class="fas fa-pencil-alt pencil-icon" data-aos="zoom-in"></i>
                     <h6 class="text-dark mb-3 mt-4 font-weight-medium">Paper Writing Assistance</h6>
-                    <p style="font-size: 18px; font-family:math;color:blue;">Struggling to articulate your research findings effectively? Our expert writers are here to help. Whether you need assistance with drafting a compelling abstract, refining your methodology, or polishing your language, we provide tailored support to help you communicate your ideas with clarity and precision.</p>
+                    <p style="font-size: 18px; font-family:math;color:blue; text-align: left;">Struggling to articulate your research findings effectively? Our expert writers are here to help. Whether you need assistance with drafting a compelling abstract, refining your methodology, or polishing your language, we provide tailored support to help you communicate your ideas with clarity and precision.</p>
                 </div>
             </div>
         </div>
         
         <div class="row" data-aos="fade-up">
-            <div class="col-sm-6 text-center text-lg-left">
+            <div class="col-sm-6 text-center text-lg-left"> <!-- Updated -->
                 <div class="services-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                     <i class="fas fa-book book-icon" data-aos="zoom-in"></i>
                     <h6 class="text-dark mb-3 mt-4 font-weight-medium">Book Publishing Services</h6>
-                    <p style="font-size: 18px; font-family:math;color:#008088;">Ready to share your expertise with the world? Our book publishing services empower authors to transform their research into impactful publications. From manuscript editing and formatting to cover design and distribution, we offer end-to-end support to help you bring your book to life.</p>
+                    <p style="font-size: 18px; font-family:math;color:#008088; text-align: left;">Ready to share your expertise with the world? Our book publishing services empower authors to transform their research into impactful publications. From manuscript editing and formatting to cover design and distribution, we offer end-to-end support to help you bring your book to life.</p>
                 </div>
             </div>
-            <div class="col-sm-6 text-center text-lg-left">
+            <div class="col-sm-6 text-center text-lg-left"> <!-- Updated -->
                 <div class="services-box pb-lg-0" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                     <i class="fas fa-chart-line chart-icon" data-aos="zoom-in"></i>
                     <h5 class="text-dark mb-3 mt-4 font-weight-medium">Citation Increase Support</h5>
-                    <p style="font-size: 18px; font-family:math;color:#a4007b;">Boosting your citation count is essential for increasing the visibility and impact of your research. Our team employs strategic techniques to enhance the discoverability of your work, including targeted promotion, networking opportunities, and citation tracking tools.</p>
+                    <p style="font-size: 18px; font-family:math;color:#a4007b; text-align: left;">Boosting your citation count is essential for increasing the visibility and impact of your research. Our team employs strategic techniques to enhance the discoverability of your work, including targeted promotion, networking opportunities, and citation tracking tools.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 <section class="our-process" id="about">
     <div class="container">
@@ -292,65 +291,68 @@
 
 <div class="container" style="margin-top: -130px;">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3">
             <img src="images/paper.png" alt="contact" class="img-fluid" style="margin-top:200px;">
        
         </div>
-        <div class="col-md-8">
-            <div class="border p-4" style="border-radius: 10px; border: 1px solid #000000 !important;">
+        <div class="col-md-9">
+            ">
+           
                 <h4 style="text-align: center;">Submit Your Article</h4>
                 
-                <form action="{{ route('submit.article') }}"  enctype="multipart/form-data" method="post" style="display: flex; flex-direction: column;">
+                <form action="{{ route('submit.article') }}" enctype="multipart/form-data" method="post" style="display: flex; flex-direction: column;">
                     @csrf
                     <div class="custom-form-group">
                         <label for="article">Sections:</label>
                         <select id="article" name="article" class="file-input" required>
-                            <option value="">Select </option>
+                            <option value="">Select</option>
                             <option value="article">Articles</option>
-                          
                         </select>
                     </div>
-                    
-
                     <div class="custom-form-group">
                         <label for="title">Title:</label>
-                        <input type="text" id="title" name="title" class="file-input" required>
+                        <input type="text" id="title" name="title" class="file-input" style="border: 2px dashed #000000;" required>
                     </div>
                     <div class="custom-form-group">
                         <label for="abstract">Abstract:</label>
-                        <textarea id="abstract" name="abstract" class="file-input" rows="2" required></textarea>
+                        <textarea id="abstract" name="abstract" class="file-input" rows="2" style="border: 2px dashed #000000;" required></textarea>
                     </div>
                     <div class="custom-form-group">
                         <label for="keywords">Keywords:</label>
-                        <input type="text" id="keywords" name="keywords" class="file-input" required>
+                        <input type="text" id="keywords" name="keywords" class="file-input" style="border: 2px dashed #000000;" required>
                     </div>
                     <div class="custom-form-group">
                         <label for="reference">References:</label>
-                        <textarea id="reference" name="reference" class="file-input" rows="2"></textarea>
+                        <textarea id="reference" name="reference" class="file-input" rows="2" style="border: 2px dashed #000000;"></textarea>
                     </div>
-                    <div class="custom-form-group">
-                        <label for="author">Author Name:</label>
-                        <input type="text" id="author" name="author" class="file-input" required>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div class="custom-form-group" style="width: 45%;">
+                            <label for="author">Author Name (Separated by Comma):</label>
+                            <input type="text" id="author" name="author" class="file-input" style="border: 2px dashed #000000;" required>
+                        </div>
+                        <div class="custom-form-group" style="width: 50%; margin-left: 20px;">
+                            <label for="galleys">Galleys:</label>
+                            <input type="file" id="galleys" name="galleys" class="file-input" style="border: 2px dashed #000000;" accept="application/pdf">
+                        </div>
                     </div>
-                    <div class="custom-form-group">
-                        <label for="galleys">Galleys:</label>
-                        <input type="file" id="galleys" name="galleys" class="file-input" style="border-style: none !important;" accept="application/pdf">
-                    </div>
-                    <div class="custom-form-group">
-                        <label for="galleys">Issue:</label>
-                        <input type="text" id="galleys" name="issue" class="file-input" style="border-style: none !important;" accept="application/pdf">
-                    </div>
-                    <div class="custom-form-group">
-                        <label for="page">Page Number:</label>
-                        <input type="text" id="page" name="page" class="file-input">
-                    </div>
-                    <div class="button-container">
-                        <input type="submit" value="Save" class="button">
-                        <input type="reset" value="Cancel" class="cancel-button">
+                    <div style="display: flex; justify-content: space-between;">
+                        <div class="custom-form-group" style="width: 45%;">
+                            <label for="issue">Issue:</label>
+                            <input type="text" id="issue" name="issue" class="file-input" style="border: 2px dashed #000000;" accept="application/pdf">
+                        </div>
+                        <div class="custom-form-group" style="width: 50%; margin-left: 20px;">
+                            <label for="page">Page Number:</label>
+                            <input type="text" id="page" name="page" class="file-input" style="border: 2px dashed #000000;">
+                        </div>
                     </div>
                     
-
+                    
+                    <div class="button-container">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <input type="reset" class="btn btn-primary" value="Cancel">
+                    </div>
                 </form>
+                
             </div>
         </div>
     </div>
@@ -572,9 +574,9 @@
 }
 
 .file-input {
-    border: none !important; /* Remove default border */
+    border: 2px dashed black; /* Remove default border */
     padding: 10px; /* Add padding for better appearance */
-    background-color: #5abbcb; /* Add background color */
+    background-color:; /* Add background color */
     border-radius: 5px; /* Add border radius */
     width: 100%;
     line-height: 1.8;/* Set width to 100% */
