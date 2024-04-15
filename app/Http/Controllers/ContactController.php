@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\Models\Contact;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\ContactFormSubmitted; // Import the Mailable class
+use App\Mail\ContactFormSubmitted;
 
 class ContactController extends Controller
 {
@@ -24,11 +25,10 @@ class ContactController extends Controller
 
         if ($contact->save()) {
             // Send email notification
-            Mail::to('parihararpiy@gmail.com')->send(new ContactFormSubmitted($contact));
+            Mail::to('ankurparihar111@gmail.com')->send(new ContactFormSubmitted($contact));
 
-            // Successful save, redirect with success message and scroll position
-            return redirect()->back()->with('contactSuccess', 'Form submitted successfully!')
-                ->with('scrollToContactForm', true);
+            // Redirect to a thank you page after successful submission
+            return Redirect::route('thank-you')->with('contactSuccess', 'Form submitted successfully!');
         } else {
             // Validation errors, redirect with error message and keep form data pre-filled
             return redirect()->back()->withErrors(['message' => 'Validation errors occurred. Please check your input.'])
@@ -37,3 +37,5 @@ class ContactController extends Controller
         }
     }
 }
+
+
