@@ -9,11 +9,10 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function index()
-    {
-        $forms = Form::all();
-        return view('forms.index', compact('forms'));
-    }
-
+{
+    $forms = Form::paginate(10); // Paginate the query with 10 entries per page
+    return view('forms.index', compact('forms'));
+}
     public function home()
     {
         return view('admin.home');

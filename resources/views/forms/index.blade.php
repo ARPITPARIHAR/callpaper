@@ -3,6 +3,7 @@
 
 @include('admin.includes.navbar')
 @include('admin.includes.leftbar')
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <head>
     <meta charset="UTF-8">
@@ -95,9 +96,16 @@
                                         <td>{{ $form->page }}</td>
                                     </tr>
                                 @endforeach
+                               
                             </tbody>
                         </table>
                     </div>
+                   
+                    <div class="pagination">
+                        {{ $forms->appends(Request::except('page'))->links() }}
+                    </div>
+                    
+                    
                 </div>
             </div>
         </div>
@@ -106,6 +114,50 @@
 </div>
 
 </html>
+<style>
+.pagination {
+    display: inline-flex !important;
+    padding-left: 0 !important;
+    list-style: none !important;
+    border-radius: .25rem !important;
+}
+
+.page-link {
+    position: relative !important;
+    display: block !important;
+    padding: .5rem .75rem !important;
+    margin-left: -1px !important;
+    line-height: 1.25 !important;
+    color: #007bff !important;
+    background-color: #fff !important;
+    border: 1px solid #dee2e6 !important;
+}
+
+.page-link:hover {
+    z-index: 2 !important;
+    color: #0056b3 !important;
+    text-decoration: none !important;
+    background-color: #e9ecef !important;
+    border-color: #dee2e6 !important;
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d !important;
+    pointer-events: none !important;
+    cursor: auto !important;
+    background-color: #fff !important;
+    border-color: #dee2e6 !important;
+}
+<style>
+    .pagination svg {
+        width: 1em !important;
+        height: 1em !important;
+    }
+</style>
+
+
+
+</style>
 
 @section('style')
     

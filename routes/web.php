@@ -24,9 +24,9 @@ Route::get('/', [HomeController::class, 'home']);
 Route::post('/submit-form', [ContactController::class, 'store'])->name('submit.form');
 Route::post('/submit-article', [FormController::class, 'store'])->name('submit.article');
 
-// Route::middleware(['auth', AuthenticateAdmin::class])->group(function () {
+ Route::middleware(['auth', AuthenticateAdmin::class])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'home']);
-// });
+ });
 Route::get('/form', [AdminController::class, 'index'])->name('forms.index');
 Route::get('/contact', [AdminController::class, 'showContacts'])->name('contacts.index');
 
