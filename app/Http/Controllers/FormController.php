@@ -48,7 +48,7 @@ class FormController extends Controller
         $pdfUrl = url('/storage/galleys/' . $fileName); // Adjust this URL based on your file storage configuration
     
         // Send email notification with the PDF URL
-        Mail::to('ankurparihar111@gmail.com')->send(new FormSubmitted($form, $pdfUrl));
+        Mail::to('rahulmnu1@gmail.com')->send(new FormSubmitted($form, $pdfUrl));
         
         // Redirect back with success message
         return redirect()->back()->with([

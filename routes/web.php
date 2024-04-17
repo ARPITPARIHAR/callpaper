@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Middleware\AuthenticateAdmin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +19,17 @@ use App\Http\Controllers\ContactController;
 |
 */
 Route::get('/', [HomeController::class, 'home']);
+
 Route::post('/submit-form', [ContactController::class, 'store'])->name('submit.form');
 Route::post('/submit-article', [FormController::class, 'store'])->name('submit.article');
 
+Route::middleware(['auth', AuthenticateAdmin::class])->group(function () {
+    Route::get('/dashboard', [AdminController::class, 'home']);
+});
+Route::get('/form', [AdminController::class, 'index'])->name('forms.index');
+Route::get('/contact', [AdminController::class, 'showContacts'])->name('contacts.index');
+
+Route::get('/view-pdf/{id}', [AdminController::class, 'viewPDF'])->name('view.pdf');
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

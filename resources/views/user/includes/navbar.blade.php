@@ -55,9 +55,12 @@
                                 <div class="d-sm-flex justify-content-between">
                                     <div data-aos="zoom-in-up">
                                         <div class="banner-title">
-                                            <h3 class="font-weight-medium">Empowering Academic Publishing</h3>
+											<h4 style="display: inline-block;">Empowering Academic Publishing</h5>
                                         </div>
-                                        <p class="mt-3">Unlock the potential of your research with our comprehensive publishing solutions. We provide tailored support to researchers and academics, helping them navigate the complexities of academic publishing and maximize the impact of their work.</p>
+                                        <p class="mt-6" style="text-align: justify;">
+											Unlock the potential of your research with our comprehensive publishing solutions. We provide tailored support to researchers and academics, helping them navigate the complexities of academic publishing and maximize the impact of their work.
+										</p>
+										
                                         <a href="#" class="btn btn-secondary mt-3">Explore Our Services</a>
                                     </div>
                                     <div class="mt-5 mt-lg-0">
@@ -75,4 +78,18 @@
             .nav-link {
                 font-size: 18px !important; /* Font size ko 28px set kiya gaya hai */
             }
+
+			/* CSS for mobile responsiveness */
+@media only screen and (max-width: 600px) {
+  .navbar-brand {
+    margin-left: 0; /* Change margin-left to 0 for mobile devices */
+    text-align: center; /* Center align text on mobile devices */
+    width: 100%; /* Make navbar-brand take up full width on mobile devices */
+    padding: 10px 0; /* Add some padding for better spacing on mobile devices */
+  }
+}
+.navbar-toggler-icon {
+    color: black !important; /* Change color to black for the hamburger icon */
+}
+
             </style>

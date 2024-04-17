@@ -41,7 +41,7 @@
 			.nav-link {
 				color: $nav-link-color;
 				font-size: $nav-link-font-size;
-				font-weight: 700;
+				font-weight: 500;
 				padding: $nav-link-padding;
 				-webkit-transition: all 1s;
 				-moz-transition: all 1s;
@@ -162,6 +162,4 @@
 		position: absolute;
 		top: 0
 	}
-
 }
-
