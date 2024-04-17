@@ -59,7 +59,7 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="card-title">Form Data</h2>
+                    <h2 class="card-title" style="text-align: center;">Form Data</h2>
                     <div class="table-container">
                         <table class="table">
                             <thead>
@@ -101,9 +101,11 @@
                         </table>
                     </div>
                    
+                 
                     <div class="pagination">
-                        {{ $forms->appends(Request::except('page'))->links() }}
+                        {!! $forms->withQueryString()->links('pagination::bootstrap-5') !!}
                     </div>
+                    
                     
                     
                 </div>
@@ -114,50 +116,14 @@
 </div>
 
 </html>
-<style>
-.pagination {
-    display: inline-flex !important;
-    padding-left: 0 !important;
-    list-style: none !important;
-    border-radius: .25rem !important;
-}
-
-.page-link {
-    position: relative !important;
-    display: block !important;
-    padding: .5rem .75rem !important;
-    margin-left: -1px !important;
-    line-height: 1.25 !important;
-    color: #007bff !important;
-    background-color: #fff !important;
-    border: 1px solid #dee2e6 !important;
-}
-
-.page-link:hover {
-    z-index: 2 !important;
-    color: #0056b3 !important;
-    text-decoration: none !important;
-    background-color: #e9ecef !important;
-    border-color: #dee2e6 !important;
-}
-
-.page-item.disabled .page-link {
-    color: #6c757d !important;
-    pointer-events: none !important;
-    cursor: auto !important;
-    background-color: #fff !important;
-    border-color: #dee2e6 !important;
-}
-<style>
-    .pagination svg {
-        width: 1em !important;
-        height: 1em !important;
-    }
-</style>
 
 
 
-</style>
+
+
+
+
+
 
 @section('style')
     

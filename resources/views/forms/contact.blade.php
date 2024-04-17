@@ -9,7 +9,7 @@
 <div class="container" style="margin-left: 250px;"> <!-- Add margin to accommodate left sidebar -->
     <h2 style="text-align: center;">Contact Messages</h2>
     <div class="table-responsive"> <!-- Make the table responsive -->
-        <table class="table table-bordered table-striped"> <!-- Add Bootstrap table classes for styling -->
+        <table class="table table-bordered table-striped table-hover"><!-- Add Bootstrap table classes for styling -->
             <thead class="thead-dark"> <!-- Dark header background -->
                 <tr>
                     <th>S.N.</th> <!-- Serial number column -->
@@ -21,7 +21,7 @@
             <tbody>
                 @php $serial = 1; @endphp <!-- Initialize serial number variable -->
                 @foreach ($contacts as $contact)
-                    <tr>
+                <tr>
                         <td>{{ $serial++ }}</td> <!-- Display serial number and increment -->
                         <td>{{ $contact->name }}</td>
                         <td>{{ $contact->email }}</td>
@@ -31,6 +31,11 @@
             </tbody>
         </table>
     </div>
+    <div class="pagination">
+        {!! $contacts->withQueryString()->links('pagination::bootstrap-5') !!}
+    </div>
+    
+    
 </div>
 
 

@@ -33,7 +33,7 @@ class AdminController extends Controller
 
  public function showContacts()
     {
-        $contacts = Contact::all();
+        $contacts = Contact::paginate(10);
         return view('forms.contact', compact('contacts'));
     }
 
