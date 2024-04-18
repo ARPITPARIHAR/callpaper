@@ -1,10 +1,8 @@
-
 @extends('admin.layouts.app')
 @section('meta_title', 'game')
 
 @include('admin.includes.navbar')
 @include('admin.includes.leftbar')
-
 
 <div class="container" style="margin-left: 250px;"> <!-- Add margin to accommodate left sidebar -->
     <h2 style="text-align: center;">Contact Messages</h2>
@@ -34,11 +32,7 @@
     <div class="pagination">
         {!! $contacts->withQueryString()->links('pagination::bootstrap-5') !!}
     </div>
-    
-    
 </div>
-
-
 
 @section('style')
     
@@ -47,3 +41,4 @@
 @section('script')
     
 @endsection
+
