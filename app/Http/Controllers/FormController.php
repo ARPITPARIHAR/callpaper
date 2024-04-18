@@ -36,7 +36,7 @@ class FormController extends Controller
         if ($request->hasFile('galleys')) {
             $file = $request->file('galleys');
             $fileName = $file->getClientOriginalName();
-            $file->storeAs('public/galleys', $fileName);
+            $file->storeAs('/galleys', $fileName);
             $form->galleys = $fileName;
         }
         $form->issue = $request->issue;
@@ -48,7 +48,7 @@ class FormController extends Controller
         $pdfUrl = url('/storage/galleys/' . $fileName); // Adjust this URL based on your file storage configuration
     
         // Send email notification with the PDF URL
-        Mail::to('rahulmnu1@gmail.com')->send(new FormSubmitted($form, $pdfUrl));
+        // Mail::to('rahulmnu1@gmail.com')->send(new FormSubmitted($form, $pdfUrl));
         
         // Redirect back with success message
         return redirect()->back()->with([
