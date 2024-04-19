@@ -46,6 +46,7 @@
                                             <th>Galleys</th>
                                             <th>Issue</th>
                                             <th>Page</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -65,8 +66,16 @@
                                             </td>
                                             <td>{{ $form->issue }}</td>
                                             <td>{{ $form->page }}</td>
+                                            <td>
+                                                <form action="{{ route('delete.form', ['id' => $form->id]) }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                                </form>
+                                            </td>
                                         </tr>
-                                        @endforeach
+                                    @endforeach
+                                    
                                     </tbody>
                                 </table>
                             </div>

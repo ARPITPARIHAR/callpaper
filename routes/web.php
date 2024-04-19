@@ -29,6 +29,10 @@ Route::post('/submit-article', [FormController::class, 'store'])->name('submit.a
  });
 Route::get('/form', [AdminController::class, 'index'])->name('forms.index');
 Route::get('/contact', [AdminController::class, 'showContacts'])->name('contacts.index');
+// web.php
+
+Route::delete('/form/{id}', [AdminController::class, 'delete'])->name('delete.form');
+
 
 Route::get('/view-pdf/{id}', [AdminController::class, 'viewPDF'])->name('view.pdf');
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');

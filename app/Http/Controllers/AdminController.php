@@ -37,4 +37,11 @@ class AdminController extends Controller
         return view('forms.contact', compact('contacts'));
     }
 
+    public function delete($id)
+    {
+        $form = Form::findOrFail($id); // Find the form entry by its ID
+        $form->delete(); // Delete the form entry
+        return redirect()->back()->with('success', 'Form data deleted successfully.'); // Redirect back with success message
+    }
+
 }
