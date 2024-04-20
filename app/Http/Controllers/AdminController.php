@@ -19,28 +19,23 @@ class AdminController extends Controller
     {
         return view('admin.home');
     }
-
-
-    public function viewPDF($id)
-    {
-        $form = Form::findOrFail($id); // Assuming your Form model has primary key 'id'
-        
-        // Assuming 'galleys' column stores PDF file names
-        $pdfFileName = $form->galleys;
-        
-        // Check if the file exists
-        if ($pdfFileName && file_exists(public_path('galleys/' . $pdfFileName))) {
-            // Generate URL for the PDF file
-            $pdfUrl = asset('galleys/' . $pdfFileName);
-            
-            // Redirect to the PDF file
-            return redirect($pdfUrl);
-        } else {
-            // Handle file not found error
-            return redirect()->back()->with('error', 'PDF file not found.');
-        }
-    }
+public function viewPDF($id)
+{
+    $form = Form::findOrFail($id); // Assuming your Form model has primary key 'id'
     
+    // Assuming 'galleys' column stores PDF file names
+    $pdfFileName = $form->galleys;
+    
+    // Check if the file exists
+    if ($pdfFileName && file_exists(public_path('galleys/' . $pdfFileName))) {
+        // Return a view to display the PDF file
+        return view('pdf_viewer')->with('pdfUrl', asset('galleys/' . $pdfFileName));
+    } else {
+        // Handle file not found error
+        return redirect()->back()->with('error', 'PDF file not found.');
+    }
+}
+
 
 
  public function showContacts()
