@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Models\Form;
 use Illuminate\Support\Facades\Mail;
@@ -51,7 +49,9 @@ class FormController extends Controller
         $form->save();
     
         // Generate URL for the PDF file
-        $pdfUrl = asset('galleys/' . $fileName);
+    $pdfUrl = asset('galleys/' . $fileName);
+
+
     
         // Redirect back with success message
         return redirect()->back()->with([
@@ -61,3 +61,4 @@ class FormController extends Controller
         ]);
     }
 }
+

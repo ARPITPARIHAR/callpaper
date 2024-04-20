@@ -19,6 +19,8 @@ class AdminController extends Controller
     {
         return view('admin.home');
     }
+
+
 public function viewPDF($id)
 {
     $form = Form::findOrFail($id); // Assuming your Form model has primary key 'id'
@@ -28,8 +30,11 @@ public function viewPDF($id)
     
     // Check if the file exists
     if ($pdfFileName && file_exists(public_path('galleys/' . $pdfFileName))) {
-        // Return a view to display the PDF file
-        return view('pdf_viewer')->with('pdfUrl', asset('galleys/' . $pdfFileName));
+        // Get the full path to the PDF file
+        $filePath = public_path('galleys/' . $pdfFileName);
+        
+        // Return the file as a response
+        return response()->file($filePath);
     } else {
         // Handle file not found error
         return redirect()->back()->with('error', 'PDF file not found.');
