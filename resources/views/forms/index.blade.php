@@ -116,8 +116,6 @@
 										<li><a href="{{ route('logout') }}" class="dropdown-item"><i class="feather icon-log-out"></i>
 											Logout</a></li>
 
-										<li><a href="email_inbox.html" class="dropdown-item"><i class="feather icon-mail"></i> My Messages</a></li>
-										<li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i> Lock Screen</a></li>
 									</ul>
 								</div>
 							</div>
@@ -227,6 +225,19 @@
         </div>
     </div>
 </div>
+<style>
+	.pagination {
+		display: flex;
+		justify-content: center;
+	/* Adjust margin-top as needed */
+	}
+	.pagination .flex-shrink-0 {
+    font-size: 38px;
+	justify-content: center;/* Adjust the font size as needed */
+}
+
+
+	</style>
 
 @section('style')
     <!-- Add custom styles here -->
