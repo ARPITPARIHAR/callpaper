@@ -88,7 +88,24 @@
   }
 }
 .navbar-toggler-icon {
-    color: black !important; /* Change color to black for the hamburger icon */
+    color: black !important; 
+     background-color: pink!important;
+     border-radius: 5px !important;}
+   .custom-navbar-toggler .navbar-toggler-icon {
+    line-height: 1.5 !important;
+}
+
+
+/* Default styling */
+.navbar-brand {
+    margin-left: 0!important; /* Default margin */
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .navbar-brand {
+        margin-left: 10px!important; /* Adjust margin for smaller screens */
+    }
 }
 
             </style>
