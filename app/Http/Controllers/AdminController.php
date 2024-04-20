@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Form;
 use App\Models\Contact; // Assuming your model is named 'Form'
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class AdminController extends Controller
 {
@@ -26,10 +28,20 @@ class AdminController extends Controller
         // Assuming 'galleys' column stores PDF file names
         $pdfFileName = $form->galleys;
         
-        // You can return a view to display the PDF, or redirect to the actual PDF file
-        // For example, if the PDFs are stored in 'storage/galleys' directory, you can return a redirect to it
-        return redirect(asset('storage/galleys/' . $pdfFileName));
+        // Check if the file exists
+        if ($pdfFileName && file_exists(public_path('galleys/' . $pdfFileName))) {
+            // Generate URL for the PDF file
+            $pdfUrl = asset('galleys/' . $pdfFileName);
+            
+            // Redirect to the PDF file
+            return redirect($pdfUrl);
+        } else {
+            // Handle file not found error
+            return redirect()->back()->with('error', 'PDF file not found.');
+        }
     }
+    
+
 
  public function showContacts()
     {
