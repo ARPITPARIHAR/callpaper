@@ -299,60 +299,72 @@
             
            
                 <h4 style="text-align: center;">Submit Your Article</h4>
-                
-                <form action="{{ route('submit.article') }}" enctype="multipart/form-data" method="post" style="display: flex; flex-direction: column;">
-                    @csrf
-                    <div class="custom-form-group">
-                        <label for="article">Sections:</label>
-                        <select id="article" name="article" class="file-input" required>
-                            <option value="">Select</option>
-                            <option value="article">Articles</option>
-                        </select>
-                    </div>
-                    <div class="custom-form-group">
-                        <label for="title">Title:</label>
-                        <input type="text" id="title" name="title" class="file-input" style="border: 2px dashed #000000;" required>
-                    </div>
-                    <div class="custom-form-group">
-                        <label for="abstract">Abstract:</label>
-                        <textarea id="abstract" name="abstract" class="file-input" rows="2" style="border: 2px dashed #000000;" required></textarea>
-                    </div>
-                    <div class="custom-form-group">
-                        <label for="keywords">Keywords:</label>
-                        <input type="text" id="keywords" name="keywords" class="file-input" style="border: 2px dashed #000000;" required>
-                    </div>
-                    <div class="custom-form-group">
-                        <label for="reference">References:</label>
-                        <textarea id="reference" name="reference" class="file-input" rows="2" style="border: 2px dashed #000000;"></textarea>
-                    </div>
-                    <div style="display: flex; justify-content: space-between;">
-                        <div class="custom-form-group" style="width: 45%;">
-                            <label for="author">Author Name (Separated by Comma):</label>
-                            <input type="text" id="author" name="author" class="file-input" style="border: 2px dashed #000000;" required>
-                        </div>
-                        <div class="custom-form-group" style="width: 50%; margin-left: 20px;">
-                            <label for="galleys">Galleys:</label>
-                            <input type="file" id="galleys" name="galleys" class="file-input" style="border: 2px dashed #000000;" accept="application/pdf">
-                        </div>
-                    </div>
-                    <div style="display: flex; justify-content: space-between;">
-                        <div class="custom-form-group" style="width: 45%;">
-                            <label for="issue">Issue:</label>
-                            <input type="text" id="issue" name="issue" class="file-input" style="border: 2px dashed #000000;" accept="application/pdf">
-                        </div>
-                        <div class="custom-form-group" style="width: 50%; margin-left: 20px;">
-                            <label for="page">Page Number:</label>
-                            <input type="text" id="page" name="page" class="file-input" style="border: 2px dashed #000000;">
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="button-container">
-                        <button type="submit" class="btn btn-primary">Save</button>
-                        <input type="reset" class="btn btn-primary" value="Cancel">
-                    </div>
-                </form>
-                
+     <!-- Your Blade view file -->
+\<!-- Your Blade view file -->
+
+@if ($errors->any())
+    <script>
+        alert(" Error: Please upload only pdf file in galleys field.");
+    </script>
+@endif
+
+@if (session('error'))
+    <script>
+        alert("{{ session('error') }}");
+    </script>
+@endif
+
+<form action="{{ route('submit.article') }}" enctype="multipart/form-data" method="post" style="display: flex; flex-direction: column;">
+    @csrf
+    <div class="custom-form-group">
+        <label for="article">Sections:</label>
+        <select id="article" name="article" class="file-input" required>
+            <option value="">Select</option>
+            <option value="article" {{ old('article') == 'article' ? 'selected' : '' }}>Articles</option>
+        </select>
+    </div>
+    <div class="custom-form-group">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" class="file-input" style="border: 2px dashed #000000;" required value="{{ old('title') }}">
+    </div>
+    <div class="custom-form-group">
+        <label for="abstract">Abstract:</label>
+        <textarea id="abstract" name="abstract" class="file-input" rows="2" style="border: 2px dashed #000000;" required>{{ old('abstract') }}</textarea>
+    </div>
+    <div class="custom-form-group">
+        <label for="keywords">Keywords:</label>
+        <input type="text" id="keywords" name="keywords" class="file-input" style="border: 2px dashed #000000;" required value="{{ old('keywords') }}">
+    </div>
+    <div class="custom-form-group">
+        <label for="reference">References:</label>
+        <textarea id="reference" name="reference" class="file-input" rows="2" style="border: 2px dashed #000000;">{{ old('reference') }}</textarea>
+    </div>
+    <div style="display: flex; justify-content: space-between;">
+        <div class="custom-form-group" style="width: 45%;">
+            <label for="author">Author Name (Separated by Comma):</label>
+            <input type="text" id="author" name="author" class="file-input" style="border: 2px dashed #000000;" required value="{{ old('author') }}">
+        </div>
+        <div class="custom-form-group" style="width: 50%; margin-left: 20px;">
+            <label for="galleys">Galleys:</label>
+            <input type="file" id="galleys" name="galleys" class="file-input" style="border: 2px dashed #000000;" accept="application/pdf">
+        </div>
+    </div>
+    <div style="display: flex; justify-content: space-between;">
+        <div class="custom-form-group" style="width: 45%;">
+            <label for="issue">Issue:</label>
+            <input type="text" id="issue" name="issue" class="file-input" style="border: 2px dashed #000000;" accept="application/pdf" value="{{ old('issue') }}">
+        </div>
+        <div class="custom-form-group" style="width: 50%; margin-left: 20px;">
+            <label for="page">Page Number:</label>
+            <input type="text" id="page" name="page" class="file-input" style="border: 2px dashed #000000;" value="{{ old('page') }}">
+        </div>
+    </div>
+    <div class="button-container">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <input type="reset" class="btn btn-primary" value="Cancel">
+    </div>
+</form>
+
             </div>
         </div>
     </div>
@@ -384,8 +396,8 @@
                                 </p>
                             </div>
                         </div>
-                        
-                        
+ 
+ 
 
                 <form method="POST" action="{{ route('submit.form') }}" id="your-form-id">
                     @csrf
@@ -642,18 +654,33 @@
         }
     });
 </script> --}}
+
 @if(session('success') && session('scrollToProjectForm'))
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const formSection = document.getElementById("projects");
-            if (formSection) {
-                const offset = formSection.getBoundingClientRect().top - 350;
-                window.scrollTo({ top: offset, behavior: "smooth" });
-            }
+            let scrollPosition = 0;
+
+            // Store the current scroll position
+            scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Show the alert
+            alert(" Your Form submitted successfully!");
+
+            // Scroll to the form section after a short delay
+            setTimeout(function() {
+                const formSection = document.getElementById("paper");
+                if (formSection) {
+                    const offset = formSection.getBoundingClientRect().top - 350;
+                    window.scrollTo({ top: offset, behavior: "smooth" });
+                }
+            }, 100);
         });
     </script>
 @endif
 
+
+
+User
 <script>
     document.addEventListener("DOMContentLoaded", function() {
   // Check if the session for scrolling to the contact form exists

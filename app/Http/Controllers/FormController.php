@@ -5,12 +5,13 @@ use App\Models\Form;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\FormSubmitted;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class FormController extends Controller
 {
     public function store(Request $request)
     {
-        // Validate the form data if required
+        // Validate the form data
         // $request->validate([
         //     'article' => 'required',
         //     'title' => 'required',
@@ -18,7 +19,8 @@ class FormController extends Controller
         //     'keywords' => 'required',
         //     'reference' => 'required|email',
         //     'author' => 'required',
-        //     'galleys' => 'required', // Assuming 'galleys' is a file input
+        //     'galleys' => 'required|file|mimes:pdf', // Ensure 'galleys' is a required PDF file input
+        //     'issue' => 'required',
         //     'page' => 'required',
         // ]);
     
@@ -34,6 +36,12 @@ class FormController extends Controller
         // Handle file upload
         if ($request->hasFile('galleys')) {
             $file = $request->file('galleys');
+            
+            // Ensure the file is a PDF
+            if ($file->getClientOriginalExtension() !== 'pdf') {
+                return redirect()->back()->withInput()->with('error', 'Only PDF files are allowed for galleys.');
+            }
+    
             $fileName = $file->getClientOriginalName();
     
             // Store the file in the public/galleys directory
@@ -41,6 +49,9 @@ class FormController extends Controller
     
             // Save the file name to the database
             $form->galleys = $fileName;
+        } else {
+            // If 'galleys' input is empty, show error message
+            return redirect()->back()->withInput()->with('error', 'Please upload a PDF file for galleys.');
         }
     
         $form->issue = $request->issue;
@@ -49,9 +60,7 @@ class FormController extends Controller
         $form->save();
     
         // Generate URL for the PDF file
-    $pdfUrl = asset('galleys/' . $fileName);
-
-
+        $pdfUrl = asset('galleys/' . $fileName);
     
         // Redirect back with success message
         return redirect()->back()->with([
@@ -60,5 +69,7 @@ class FormController extends Controller
             'pdfUrl' => $pdfUrl, // Pass $pdfUrl to the view
         ]);
     }
+    
+    
 }
 
