@@ -24,7 +24,8 @@
 }
 
 .scroll-div {
-    height: auto !important;
+    max-height: calc(100vh - 56px); /* Adjust 56px according to your header height */
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
 }
 
 /* Ensure the content area takes up remaining space */

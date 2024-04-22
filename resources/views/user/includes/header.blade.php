@@ -680,7 +680,7 @@
 
 
 
-User
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
   // Check if the session for scrolling to the contact form exists

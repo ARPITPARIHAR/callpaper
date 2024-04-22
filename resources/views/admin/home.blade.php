@@ -26,14 +26,16 @@
 }
 
 .scroll-div {
-    height: auto !important;
+    max-height: calc(100vh - 56px); /* Adjust 56px according to your header height */
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
 }
+
 
 /* Ensure the content area takes up remaining space */
 .main-content {
     min-height: calc(100vh - 56px); /* Adjust 56px according to your header height */
 }
-    
+
 </style>
 @endsection
 			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -174,16 +176,17 @@
 			</div>
 		</div>
 	</nav>
-<div class="container-fluid">
-
-    
-        <div class="col-md-10 main-content">
-            <!-- Main content goes here -->
-            <h1>Welcome to the Dashboard of Scholarlypublishing Help</h1>
-            <!-- Include your main content here -->
-        </div>
-    </div>
-</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-10 col-lg-10 main-content" style="margin-left: 400px;">
+				<!-- Main content goes here -->
+				<h3>Welcome to the Dashboard of Scholarlypublishing Help</h3>
+				<!-- Include your main content here -->
+			</div>
+		</div>
+	</div>
+	
+	
 
 <!-- Include Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
