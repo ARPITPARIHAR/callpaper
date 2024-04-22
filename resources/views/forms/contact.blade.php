@@ -19,7 +19,19 @@
         .table {
             min-width: 100%; /* Set minimum width to 100% */
         }
-        
+        .navbar-wrapper {
+    height: auto !important;
+}
+
+.scroll-div {
+    height: auto !important;
+}
+
+/* Ensure the content area takes up remaining space */
+.main-content {
+    min-height: calc(100vh - 56px); /* Adjust 56px according to your header height */
+}
+
            @media (min-width: 768px) { /* Adjust this breakpoint as needed */
         .main-content {
             margin-left: 40%; /* Adjust the padding to accommodate the left sidebar */
@@ -30,6 +42,8 @@
                margin-top: 2%;
         }
     }
+    /* Add this CSS to adjust the height dynamically based on screen size */
+
     </style>
 
 <header class="navbar pcoded-header navbar-expand-lg navbar-light header-dark">

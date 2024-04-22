@@ -2,8 +2,42 @@
 @section('meta_title','game')
 
 <header class="navbar pcoded-header navbar-expand-lg navbar-light header-dark">
-		
-			
+@section('style')
+<style>
+    /* Custom styles for responsiveness */
+    .header-dark {
+        /* Add your header styles here */
+    }
+
+    .pcoded-navbar {
+        /* Add your navbar styles here */
+    }
+
+    .container-fluid {
+        padding: 20px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+    
+    .navbar-wrapper {
+    height: auto !important;
+}
+
+.scroll-div {
+    height: auto !important;
+}
+
+/* Ensure the content area takes up remaining space */
+.main-content {
+    min-height: calc(100vh - 56px); /* Adjust 56px according to your header height */
+}
+    
+</style>
+@endsection
+			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 				<div class="m-header">
 					<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
 					<a href="#!" class="b-brand">
@@ -33,8 +67,7 @@
 								<div class="dropdown-menu profile-notification ">
 									<ul class="pro-body">
 										<li><a href="/logout" class="dropdown-item"><i class="fas fa-circle"></i> Logout</a></li>
-										{{-- <li><a href="email_inbox.html" class="dropdown-item"><i class="fas fa-circle"></i> My Messages</a></li> --}}
-										<li><a href="auth-signin.html" class="dropdown-item"><i class="fas fa-circle"></i> Lock Screen</a></li>
+									
 									</ul>
 								</div>
 							</div>
@@ -141,20 +174,19 @@
 			</div>
 		</div>
 	</nav>
-	<div class="container-fluid">
-    <div class="row">
-        <!-- Left Sidebar -->
-        <div class="col-md-2">
-            <!-- Include left sidebar content here -->
-        </div>
-        <!-- Main Content -->
-        <div class="col-md-10">
+<div class="container-fluid">
+
+    
+        <div class="col-md-10 main-content">
             <!-- Main content goes here -->
-            <h1>Welcome to Dashboard of Scholarly Publishing Help</h1>
-            <!-- Include the register form here -->
+            <h1>Welcome to the Dashboard of Scholarlypublishing Help</h1>
+            <!-- Include your main content here -->
         </div>
     </div>
 </div>
+
+<!-- Include Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
 @section('style')

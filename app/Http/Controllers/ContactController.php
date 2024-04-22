@@ -25,7 +25,7 @@ class ContactController extends Controller
     
         if ($contact->save()) {
             // Send email notification
-            // Mail::to([ 'shppg46@gmail.com', 'rahulmnu1@gmail.com'])->send(new ContactFormSubmitted($contact));
+             Mail::to([ 'ankurparihar111@gmail.com', ])->send(new ContactFormSubmitted($contact));
 
             // Redirect back to the same page with success message and anchor to the contact form
             return Redirect::back()->with('contactSuccess', 'Form submitted successfully!#contact-form')->withInput();
