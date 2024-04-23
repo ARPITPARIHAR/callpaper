@@ -160,7 +160,7 @@
 		</div>
 	</nav>
 	<body>
-	<div class="container-fluid">
+	<div class="container-fluid" style="background-color: hsl(54, 100%, 76%);height:100%;">
 		<div class="row">
 			<div class="col-md-10 col-lg-10 main-content" style="margin-left: 400px;">
 				<!-- Main content goes here -->

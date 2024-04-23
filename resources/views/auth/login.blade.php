@@ -9,7 +9,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #cc5252;
+            background-color: #ffb8b8;
         }
 
         .login-container {

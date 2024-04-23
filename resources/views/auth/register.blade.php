@@ -18,6 +18,9 @@
         .table {
             min-width: 100%; /* Set minimum width to 100% */
         }
+		.body {
+    background-color: #ffb8b8 !important;
+}
 
         /* Adjustments for smaller screens */
         @media (max-width: 576px) {
@@ -175,7 +178,7 @@
 
 
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-<div class="container-fluid">
+<div class="container-fluid" style="background-color: hsl(54, 100%, 76%);height:100%;">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

@@ -156,9 +156,6 @@
 			</div>
 		</div>
 	</nav>
-
-
-    
                 <div class="table-container" style="background-color:white;border-radius:10px";>
                     <table class="table table-striped">
                         <h2 style="text-align:center;">Contact-Data</h2>
