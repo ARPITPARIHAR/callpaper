@@ -72,37 +72,8 @@
 							</div>
 						</li>
 						<li class="nav-item">
-							<div class="dropdown">
-								<a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
-									Dropdown
-								</a>
-								<div class="dropdown-menu profile-notification ">
-									<ul class="pro-body">
-										<li><a href="/logout" class="dropdown-item"><i class="fas fa-circle"></i> Logout</a></li>
-										{{-- <li><a href="email_inbox.html" class="dropdown-item"><i class="fas fa-circle"></i> My Messages</a></li> --}}
-										<!--<li><a href="auth-signin.html" class="dropdown-item"><i class="fas fa-circle"></i> Lock Screen</a></li>-->
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li class="nav-item">
-							<div class="dropdown mega-menu">
-								<a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
-									Mega
-								</a>
-								<div class="dropdown-menu profile-notification ">
-									<div class="row no-gutters">
-										<div class="col">
-											<h6 class="mega-title">UI Element</h6>
-											
-										</div>
-										<div class="col">
-											<h6 class="mega-title">Forms</h6>
-										
-										
-										
-									</div>
-								</div>
+						
+						
 							</div>
 						</li>
 					</ul>
@@ -190,7 +161,7 @@
     
                 <div class="table-container" style="background-color:white;border-radius:10px";>
                     <table class="table table-striped">
-                        <h2 style="text-align:center;">Form-Data</h2>
+                        <h2 style="text-align:center;">Contact-Data</h2>
                         <thead> <!-- Dark header background -->
                 <tr>
                     <th>S.N.</th> <!-- Serial number column -->

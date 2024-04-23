@@ -8630,8 +8630,7 @@ body {
   line-height: 1.5;
   color: #6c7293;
   text-align: left;
-  background-color: #d3ffa5 !important;
-
+  background-color:#d3ffa5;
 }
 
 [tabindex="-1"]:focus {

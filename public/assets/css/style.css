@@ -351,7 +351,7 @@ body {
     line-height: 1.5;
     color: #373a3c;
     text-align: left;
-    background:!important;
+    background:#e8fbb5!important;
 }
 
 [tabindex="-1"]:focus {

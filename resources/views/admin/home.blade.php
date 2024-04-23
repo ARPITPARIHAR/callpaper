@@ -61,24 +61,7 @@
 								</button>
 							</div>
 						</li>
-						<li class="nav-item">
-							<div class="dropdown">
-								<a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
-									Dropdown
-								</a>
-								<div class="dropdown-menu profile-notification ">
-									<ul class="pro-body">
-										<li><a href="/logout" class="dropdown-item"><i class="fas fa-circle"></i> Logout</a></li>
-									
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li class="nav-item">
-							<div class="dropdown mega-menu">
-								<a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
-									Mega
-								</a>
+						
 								<div class="dropdown-menu profile-notification ">
 									<div class="row no-gutters">
 										<div class="col">
@@ -176,6 +159,7 @@
 			</div>
 		</div>
 	</nav>
+	<body>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-10 col-lg-10 main-content" style="margin-left: 400px;">
@@ -186,7 +170,7 @@
 		</div>
 	</div>
 	
-	
+</body>
 
 <!-- Include Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
