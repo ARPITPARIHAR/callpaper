@@ -56,4 +56,12 @@ public function viewPDF($id)
         return redirect()->back()->with('success', 'Form data deleted successfully.'); // Redirect back with success message
     }
 
+    public function destroy($id)
+    {
+        $contact = Contact::findOrFail($id); // Find the form entry by its ID
+        $contact->delete(); // Delete the form entry
+        return redirect()->back()->with('success', 'Form data deleted successfully.'); // Redirect back with success message
+    }
+
+
 }

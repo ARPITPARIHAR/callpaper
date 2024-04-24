@@ -32,6 +32,7 @@ Route::get('/contact', [AdminController::class, 'showContacts'])->name('contacts
 // web.php
 
 Route::delete('/form/{id}', [AdminController::class, 'delete'])->name('delete.form');
+Route::delete('/contact/{id}', [AdminController::class, 'destroy'])->name('delete.form');
 
 
 Route::get('/view-pdf/{id}', [AdminController::class, 'viewPDF'])->name('view.pdf');

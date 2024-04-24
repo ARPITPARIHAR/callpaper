@@ -99,10 +99,6 @@
 		<nav class="pcoded-navbar  ">
 		<div class="navbar-wrapper  ">
 			<div class="navbar-content scroll-div " >
-				
-				
-					
-				
 				<ul class="nav pcoded-inner-navbar ">
 					<li class="nav-item pcoded-menu-caption">
 						<label>Navigation</label>
@@ -110,10 +106,7 @@
 					<li class="nav-item">
 					    <a href="/dashboard" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
 					</li>
-				
-				
-					
-					<li class="nav-item pcoded-menu-caption">
+				<li class="nav-item pcoded-menu-caption">
 					    <label>Forms &amp; table</label>
 					</li>
 					<li class="nav-item">
@@ -122,9 +115,7 @@
 					<li class="nav-item">
 					    <a href="/contact" class="nav-link "><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Contacts</span></a>
 					</li>
-				
-				
-					<li class="nav-item pcoded-menu-caption">
+				<li class="nav-item pcoded-menu-caption">
 						<label>Pages</label>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
@@ -136,14 +127,9 @@
 					</li>
 				
 				</ul>
-				
-				
-			</div>
+				</div>
 		</div>
 	</nav>
-
-
-
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <div class="container-fluid" style="height:100%;">
     <div class="row justify-content-center">

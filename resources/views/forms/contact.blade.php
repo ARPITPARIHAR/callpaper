@@ -165,6 +165,7 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Message</th>
+					<th>Action</th>
                     <!-- Add more table headers if needed -->
                 </tr>
             </thead>
@@ -176,7 +177,13 @@
                     <td>{{ $contact->name }}</td>
                     <td>{{ $contact->email }}</td>
                     <td>{{ $contact->message }}</td>
-                    <!-- Add more table data cells if needed -->
+                    <td>
+						<form action="{{ route('delete.form', ['id' => $contact->id]) }}" method="POST">
+							@csrf
+							@method('DELETE')
+							<button type="submit" class="btn btn-danger">Delete</button>
+						</form>
+					</td>
                 </tr>
                 @endforeach
             </tbody>
