@@ -73,23 +73,7 @@
 							</div>
 						</li>
 						<li class="nav-item">
-							<div class="dropdown mega-menu">
-								<a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
-									Mega
-								</a>
-								<div class="dropdown-menu profile-notification ">
-									<div class="row no-gutters">
-										<div class="col">
-											<h6 class="mega-title">UI Element</h6>
-											
-										</div>
-										<div class="col">
-											<h6 class="mega-title">Forms</h6>
-										
-										
-										
-									</div>
-								</div>
+							
 							</div>
 						</li>
 					</ul>
