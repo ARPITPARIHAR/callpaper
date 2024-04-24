@@ -54,7 +54,7 @@
 				<div class="m-header">
 					<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
 					<a href="#!" class="b-brand">
-						<!-- ========   change your logo hear   ============ -->
+						->
 						
 					</a>
 					<a href="#!" class="mob-toggler">
@@ -71,10 +71,8 @@
 									<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
-						</li>
-						<li class="nav-item">
-							<div class="dropdown">
-								
+					
+						
 								<div class="dropdown-menu profile-notification ">
 									<ul class="pro-body">
 										<li><a href="/logout" class="dropdown-item"><i class="fas fa-circle"></i> Logout</a></li>
@@ -95,8 +93,7 @@
 										</div>
 										<div class="col">
 											<h6 class="mega-title">Forms</h6>
-										
-										
+								
 										
 									</div>
 								</div>

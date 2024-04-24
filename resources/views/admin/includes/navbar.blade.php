@@ -22,50 +22,7 @@
 					    <a href="/admin" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
-					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Page layouts</span></a>
-					    <ul class="pcoded-submenu">
-					        <li><a href="layout-vertical.html" target="_blank">Vertical</a></li>
-					        <li><a href="layout-horizontal.html" target="_blank">Horizontal</a></li>
-					    </ul>
-					</li>
-					<li class="nav-item pcoded-menu-caption">
-						<label>UI Element</label>
-					</li>
-					<li class="nav-item pcoded-hasmenu">
-						<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Basic</span></a>
-				
-					</li>
-					<li class="nav-item pcoded-menu-caption">
-					    <label>Forms &amp; table</label>
-					</li>
-					<li class="nav-item">
-					    <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Forms</span></a>
-					</li>
-					<li class="nav-item">
-					    <a href="tbl_bootstrap.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Bootstrap table</span></a>
-					</li>
-					<li class="nav-item pcoded-menu-caption">
-						<label>Chart & Maps</label>
-					</li>
-					<li class="nav-item">
-					    <a href="chart-apex.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Chart</span></a>
-					</li>
-					<li class="nav-item">
-					    <a href="map-google.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Maps</span></a>
-					</li>
-					<li class="nav-item pcoded-menu-caption">
-						<label>Pages</label>
-					</li>
-					<li class="nav-item pcoded-hasmenu">
-					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Authentication</span></a>
-					    <ul class="pcoded-submenu">
-					        <li><a href="auth-signup.html" target="_blank">Sign up</a></li>
-					        <li><a href="auth-signin.html" target="_blank">Sign in</a></li>
-					    </ul>
-					</li>
-					<li class="nav-item"><a href="sample-page.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li>
-
-				</ul>
+			
 				
 				
 			</div>
@@ -114,20 +71,7 @@
 						<li class="nav-item">
 							<div class="dropdown mega-menu">
 								<a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
-									Mega
-								</a>
-								<div class="dropdown-menu profile-notification ">
-									<div class="row no-gutters">
-										<div class="col">
-											<h6 class="mega-title">UI Element</h6>
-											
-										</div>
-										<div class="col">
-											<h6 class="mega-title">Forms</h6>
-										
-										
-										
-									</div>
+								
 								</div>
 							</div>
 						</li>
@@ -157,8 +101,7 @@
 										<li><a href="{{ route('logout') }}" class="dropdown-item"><i class="feather icon-log-out"></i>
 											Logout</a></li>
 
-										<li><a href="email_inbox.html" class="dropdown-item"><i class="feather icon-mail"></i> My Messages</a></li>
-										<li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i> Lock Screen</a></li>
+					
 									</ul>
 								</div>
 							</div>

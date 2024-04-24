@@ -2,49 +2,12 @@
 @section('meta_title','game')
 
 <header class="navbar pcoded-header navbar-expand-lg navbar-light header-dark">
-@section('style')
-<style>
-    /* Custom styles for responsiveness */
-    .header-dark {
-        /* Add your header styles here */
-    }
 
-    .pcoded-navbar {
-        /* Add your navbar styles here */
-    }
-
-    .container-fluid {
-        padding: 20px;
-    }
-
-    .main-content {
-        padding: 20px;
-    }
-    
-    .navbar-wrapper {
-    height: auto !important;
-}
-
-.scroll-div {
-    max-height: calc(100vh - 56px); /* Adjust 56px according to your header height */
-    overflow-y: auto; /* Add scrollbar if content exceeds height */
-}
-
-
-/* Ensure the content area takes up remaining space */
-.main-content {
-    min-height: calc(100vh - 56px); /* Adjust 56px according to your header height */
-}
-
-</style>
-@endsection
 			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 				<div class="m-header">
 					<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
 					<a href="#!" class="b-brand">
-						<!-- ========   change your logo hear   ============ -->
-						
 					</a>
 					<a href="#!" class="mob-toggler">
 						<i class="feather icon-more-vertical"></i>
@@ -117,10 +80,6 @@
 		<nav class="pcoded-navbar  ">
 		<div class="navbar-wrapper  ">
 			<div class="navbar-content scroll-div " >
-				
-				
-					
-				
 				<ul class="nav pcoded-inner-navbar ">
 					<li class="nav-item pcoded-menu-caption">
 						<label>Navigation</label>
@@ -140,12 +99,7 @@
 					<li class="nav-item">
 					    <a href="/contact" class="nav-link "><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Contacts</span></a>
 					</li>
-				
-				
-					<!--<li class="nav-item pcoded-menu-caption">-->
-					<!--	<label>Pages</label>-->
-					<!--</li>-->
-					<li class="nav-item pcoded-hasmenu">
+				<li class="nav-item pcoded-hasmenu">
 					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Authentication</span></a>
 					    <ul class="pcoded-submenu">
 					        <li><a href="/register" target="_blank">Sign up</a></li>
@@ -159,10 +113,10 @@
 			</div>
 		</div>
 	</nav>
-	<body>
-	<div class="container-fluid" style="background-color: hsl(54, 100%, 76%);height:100%;">
+
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-10 col-lg-10 main-content" style="margin-left: 400px;">
+			<div class="col-md-10 col-lg-10 main-content text-center">
 				<!-- Main content goes here -->
 				<h3>Welcome to the Dashboard of Scholarlypublishing Help</h3>
 				<!-- Include your main content here -->
@@ -170,12 +124,36 @@
 		</div>
 	</div>
 	
-</body>
 
 <!-- Include Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+<style>
+    /* Custom styles for responsiveness */
+    .header-dark {
+        /* Add your header styles here */
+    }
 
+    .pcoded-navbar {
+        /* Add your navbar styles here */
+    }
+
+    .main-content {
+        padding: 20px;
+        overflow-x: hidden !important; /* Hide horizontal overflow */
+        overflow-y: auto; /* Enable vertical scrolling */
+        height: calc(100vh - 56px) !important; /* Adjust 56px according to your header height */
+    }
+
+    .navbar-wrapper {
+        height: auto !important;
+    }
+
+    .scroll-div {
+        max-height: calc(100vh - 56px); /* Adjust 56px according to your header height */
+        overflow-y: auto; /* Add scrollbar if content exceeds height */
+    }
+</style>
 @section('style')
     
 @endsection

@@ -59,10 +59,8 @@
 							</div>
 						</li>
 						<li class="nav-item">
-							<div class="dropdown">
-								<a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
-									Dropdown
-								</a>
+						
+								
 								<div class="dropdown-menu profile-notification ">
 									<ul class="pro-body">
 										<li><a href="/logout" class="dropdown-item"><i class="fas fa-circle"></i> Logout</a></li>
@@ -78,12 +76,7 @@
 						</li>
 					</ul>
 					<ul class="navbar-nav ml-auto">
-						<li>
-							<div class="dropdown">
-							
-								</a>
-								
-						</li>
+					
 						<li>
 							<div class="dropdown drp-user">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-top: 20px;font-size: 44px;">
@@ -162,7 +155,7 @@
 
 
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-<div class="container-fluid" style="background-color: hsl(54, 100%, 76%);height:100%;">
+<div class="container-fluid" style="height:100%;">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
