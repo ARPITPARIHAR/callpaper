@@ -42,6 +42,12 @@
               margin-right: 5%;
                margin-top: 2%;
         }
+
+		.td {
+        min-width: 50px; /* Set a minimum width for table cells */
+        padding: 8px; /* Add padding to cells for spacing */
+        border: 1px solid #ddd; /* Add borders to cells */
+    }
     }
     /* Add this CSS to adjust the height dynamically based on screen size */
 
@@ -189,16 +195,33 @@
             </tbody>
         </table>
     </div>
-    <div class="pagination">
-        {!! $contacts->withQueryString()->links('pagination::bootstrap-5') !!}
-    </div>
+	<div class="pagination" style="color: red;">
+		{!! $contacts->withQueryString()->links('pagination::bootstrap-5') !!}
+	</div>
+	
 </div>
 <style>
 .pagination {
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* Adjust margin-top as needed */
+    margin-top: 20px;
+	color: red !important;/ /* Adjust margin-top as needed */
 }
+
+.pagination {
+        font-size: 1.25rem;
+		color: red !important;/* Increase font size */
+    }
+    
+    .pagination .page-link {
+        padding: 0.75rem 1.25rem;
+		/ /* Adjust padding for larger links */
+    }
+
+	.pagination p.small.text.muted {
+    color: inherit !important; /* Use the color defined in .pagination */
+}
+
 </style>
 
 
