@@ -32,18 +32,20 @@ return [
     |            "postmark", "log", "array", "failover", "roundrobin"
     |
     */
-
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-            'port' => env('MAIL_PORT', 587),
-            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD'),
+            'host' => 'smtpout.secureserver.net', // Update with your SMTP server host
+            'port' => 80, // Update with the appropriate port for SSL/TLS connection
+            'encryption' => 'ssl', // Update with the appropriate encryption method
+            'username' => 'support@scholarlypublishinghelp.com', // Update with your SMTP username
+            'password' => 'K4VsH7;DqaYE', // Update with your SMTP password
             'timeout' => null,
-            'local_domain' => env('MAIL_EHLO_DOMAIN'),
+            'local_domain' => null, // You can leave this as is or update it if necessary
         ],
+        // Other mailers...
+    
+    
 
         'ses' => [
             'transport' => 'ses',
