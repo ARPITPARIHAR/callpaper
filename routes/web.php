@@ -31,7 +31,7 @@ Route::get('/form', [AdminController::class, 'index'])->name('forms.index');
 Route::get('/contact', [AdminController::class, 'showContacts'])->name('contacts.index');
 // web.php
 
-Route::delete('/form/{id}', [AdminController::class, 'delete'])->name('delete.form');
+Route::delete('/form/{id}', [AdminController::class, 'delete'])->name('destroy.form');
 Route::delete('/contact/{id}', [AdminController::class, 'destroy'])->name('delete.form');
 
 
