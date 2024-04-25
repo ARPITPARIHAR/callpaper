@@ -19,15 +19,7 @@
         <!-- Sidebar scroll-->
         <div>
            
-            <div class="brand-logo">
-                <a href="./index.html" class="text-nowrap logo-img">
-                  {{-- <img src="/assets/images/logos/dark-logo.svg" width="180" alt="" /> --}}
-                </a>
-                <span class="black-text">ScholarlyPublishingHelp</span>
-                <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
-                  <i class="ti ti-x fs-8"></i>
-                </div>
-              </div>
+         
           <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
             <ul id="sidebarnav">
               <li class="nav-small-cap">
@@ -59,42 +51,7 @@
                   <span class="hide-menu">Contact Table</span>
                 </a>
               </li>
-              {{-- <li class="sidebar-item">
-                <a class="sidebar-link" href="./ui-card.html" aria-expanded="false">
-                  <span>
-                    <i class="ti ti-cards"></i>
-                  </span>
-                  <span class="hide-menu">Card</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a class="sidebar-link" href="./ui-forms.html" aria-expanded="false">
-                  <span>
-                    <i class="ti ti-file-description"></i>
-                  </span>
-                  <span class="hide-menu">Forms</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a class="sidebar-link" href="./ui-typography.html" aria-expanded="false">
-                  <span>
-                    <i class="ti ti-typography"></i>
-                  </span>
-                  <span class="hide-menu">Typography</span>
-                </a>
-              </li> --}}
-              {{-- <li class="nav-small-cap">
-                <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                <span class="hide-menu">AUTH</span>
-              </li>
-              <li class="sidebar-item">
-                <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
-                  <span>
-                    <i class="ti ti-login"></i>
-                  </span>
-                  <span class="hide-menu">Login</span>
-                </a>
-              </li> --}}
+             
               <li class="sidebar-item">
                 <a class="sidebar-link" href="/register" aria-expanded="false">
                   <span>
@@ -160,35 +117,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <style>
           /* CSS for logout button */
-          .sidebar-item a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-          }
-          .sidebar-item a .fa {
-            margin-right: 10px;
-          }
-          .brand-logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #000;
-      border-radius: 20px;
-      padding: 20px;
-    }
-    .brand-logo a {
-      text-decoration: none;
-    }
-    .black-text {
-      font-size: 16px;
- 
-     
-      letter-spacing: 2px;
-      color: #FFF; /* Change text color as needed */
-      margin: 0 10px; /* Add spacing around the text */
-      font-family: 'Arial', sans-serif; /* Change font family as needed */
-    }
-    .black-text span {
-      display: inline-block;
-    }
+          
+
+
+  
           </style>
