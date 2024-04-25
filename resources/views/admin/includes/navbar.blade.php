@@ -172,3 +172,9 @@
                     </div>
                 </div>
             </nav>
+            <style>
+                .pcoded .pcoded-header .navbar-logo[logo-theme="theme1"] {
+                    background-color: #be0c0c !important;
+                }
+            </style>
+            
