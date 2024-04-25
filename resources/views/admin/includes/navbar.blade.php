@@ -72,7 +72,7 @@
                             <i class="ti-search"></i>
                         </a>
                         <a href="index.html">
-                            <img class="img-fluid" src="assets/images/logo.png" alt="Theme-Logo" />
+                            {{-- <img class="img-fluid" src="assets/images/logo.png" alt="Theme-Logo" /> --}}
                         </a>
                         <a class="mobile-options">
                             <i class="ti-more"></i>
@@ -137,7 +137,7 @@
                             <li class="user-profile header-notification">
                                 <a href="#!">
                                     <img src="assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                                    <span>John Doe</span>
+                                    <span>Scholarly Publishing Help</span>
                                     <i class="ti-angle-down"></i>
                                 </a>
                                 <ul class="show-notification profile-notification">

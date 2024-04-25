@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('meta_title', 'game')
-{{-- @include('admin.includes.navbar') --}}
+ @include('admin.includes.navbar') 
 @include('admin.includes.leftbar') 
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -8,12 +8,14 @@
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Data</title>
     <!-- Add CSS for styling -->
-    <style>
+  <style>
         /* Add custom styles here */
+      
         .table-container {
             max-width: 100%;
             overflow-x: auto;
@@ -21,27 +23,44 @@
         .table {
             min-width: 100%; /* Set minimum width to 100% */
         }
-		.body {
-    background-color: #ffb8b8 !important;
+        .navbar-wrapper {
+    height: auto !important;
 }
 
-        /* Adjustments for smaller screens */
-        @media (max-width: 576px) {
-            .table-container {
-                overflow-x: scroll;
-            }
-            .card {
-                width: 90%;
-                margin: 20px auto; /* Center align the card */
-            }
+.scroll-div {
+    max-height: calc(100vh - 56px); /* Adjust 56px according to your header height */
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
+}
+
+
+.main-content {
+    min-height: calc(100vh - 56px); /* Adjust 56px according to your header height */
+}
+
+           @media (min-width: 768px) { /* Adjust this breakpoint as needed */
+        .main-content {
+            margin-left: 40%; 
         }
+        .table-container{
+             margin-left: 20%;
+              margin-right: 5%;
+               margin-top: 2%;
+        }
+
+		.td {
+        min-width: 50px; /* Set a minimum width for table cells */
+        padding: 8px; /* Add padding to cells for spacing */
+        border: 1px solid #ddd; /* Add borders to cells */
+    }
+    }
+    .register-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
     </style>
-
-
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-<div class="container-fluid" style="height:100%;">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+  <div class="register-container mx-auto" style="max-width: 800px;">
             <div class="card">
                 <div class="card-header bg-primary text-white text-center">{{ __('Register') }}</div>
 
