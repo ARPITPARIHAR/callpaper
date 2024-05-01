@@ -36,12 +36,11 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'url' => env('MAIL_URL'),
-            'host' => env('SMTP_SERVER', 'smtp.mailgun.org'),
-            'port' => env('SMTP_PORT', 80),
-            'encryption' => env('SMTP_AUTH', 'ssl'),
-            'username' => env('SMTP_USERNAME'),
-            'password' => env('SMTP_PASSWORD'),
+            'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+            'port' => env('MAIL_PORT', 587),
+            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+            'username' => env('MAIL_USERNAME', 'parihararpiy@gmail.com'),
+            'password' => env('MAIL_PASSWORD', 'udqgwhsfxzbkmftf'),
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
         ],

@@ -56,10 +56,10 @@
   
 
     </style>
-
+  <h2 style="text-align:center;">Contact-Data</h2>
                 <div class="table-container" style="background-color:white;border-radius:10px";>
                     <table class="table table-striped">
-                        <h2 style="text-align:center;">Contact-Data</h2>
+                      
                         <thead> <!-- Dark header background -->
                 <tr>
                     <th>S.N.</th> 
