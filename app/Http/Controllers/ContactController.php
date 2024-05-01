@@ -24,13 +24,12 @@ class ContactController extends Controller
         $contact->message = $request->message;
     
         if ($contact->save()) {
-            // Send email notification
-            //  Mail::to([ 'ankurparihar111@gmail.com', ])->send(new ContactFormSubmitted($contact));
+           
+             Mail::to([ 'ankurparihar111@gmail.com', ])->send(new ContactFormSubmitted($contact));
 
-            // Redirect back to the same page with success message and anchor to the contact form
-            return Redirect::back()->with('contactSuccess', 'Form submitted successfully!#contact-form')->withInput();
+           return Redirect::back()->with('contactSuccess', 'Form submitted successfully!#contact-form')->withInput();
         } else {
-            // Validation errors, redirect with error message and keep form data pre-filled
+          
             return redirect()->back()->withErrors(['message' => 'Validation errors occurred. Please check your input.'])
                 ->withInput()
                 ->with('scrollToContactForm', true);
