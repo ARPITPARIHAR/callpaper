@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <!-- Bootstrap CSS -->
+  
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #ffb8b8;
+            background-color: #2C367F;
         }
 
         .login-container {
@@ -23,12 +23,10 @@
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="card login-container">
-                    <div class="card-header text-center bg-primary text-white">
+                    <div class="card-header text-center bg-primary text-white" style="background-color:#252D6B !important ";>
                         <h4>Login</h4>
                     </div>
                     <div class="card-body">
-                        
-
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
 
