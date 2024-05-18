@@ -15,14 +15,21 @@
     <!-- Add CSS for styling -->
   <style>
         /* Add custom styles here */
-      
         .table-container {
-            max-width: 100%;
-            overflow-x: auto;
-        }
-        .table {
-            min-width: 100%; /* Set minimum width to 100% */
-        }
+    max-width: 100%;
+    overflow-x: auto;
+    margin-left: 30%;
+    margin-right: 5%; /* Optional: Add right margin if needed */
+    margin-top: 2%; /* Optional: Add top margin if needed */
+    background-color: white;
+    border-radius: 10px;
+}
+
+.table {
+    width: 100%; /* Set width to 100% */
+}
+
+      
         .navbar-wrapper {
     height: auto !important;
 }
@@ -41,11 +48,11 @@
         .main-content {
             margin-left: 40%; 
         }
-        .table-container{
-             margin-left: 20%;
-              margin-right: 5%;
-               margin-top: 2%;
-        }
+        .table-container {
+        margin-left: 25%;
+        margin-right: 5%; /* Optional: Add right margin if needed */
+        margin-top: 2%; /* Optional: Add top margin if needed */
+    }
 
 		.td {
         min-width: 50px; /* Set a minimum width for table cells */

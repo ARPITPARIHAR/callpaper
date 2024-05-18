@@ -2,6 +2,7 @@
 	width: 100%;
 	padding: 1.875rem 1rem;
 	background: theme-color(primary);
+	height:30px;
 	@media (max-width: 991px) {
 		padding: .875rem 1rem;
 		height: $mobile-header-height;

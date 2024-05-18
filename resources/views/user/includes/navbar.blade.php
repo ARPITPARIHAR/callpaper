@@ -9,7 +9,7 @@
 	</head>
 	<body data-spy="scroll" data-target=".navbar" data-offset="50">
 		<div id="mobile-menu-overlay"></div>
-		<nav class="navbar navbar-expand-lg fixed-top">
+		<nav class="navbar navbar-expand-lg fixed-top" style="height:60px;">
 			<div class="container">
 				<a class="navbar-brand" style="margin-left: -50px;" href="https://scholarlypublishinghelp.com/">Scholarly Publishing Help</a>
 
@@ -21,7 +21,7 @@
 						<img src="images/logo-dark.svg" class="logo-mobile-menu" alt="logo">
 						<a href="javascript:;" class="close-menu"><i class="mdi mdi-close"></i></a>
 					</div>
-					<ul class="navbar-nav ml-auto align-items-center">
+					<ul class="navbar-nav ml-auto align-items-center" style="height:30px;">
 						<li class="nav-item active">
 							<a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
 						</li>
