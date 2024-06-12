@@ -64,8 +64,8 @@
 
 @media only screen and (max-width: 768px) {
     .service-container {
-        max-height: none; /* Remove max-height for smaller screens */
-        height: auto; /* Allow the container to expand based on content */
+        max-height: none !important; /* Remove max-height for smaller screens */
+        height: auto !important; /* Allow the container to expand based on content */
     }
 }
 
