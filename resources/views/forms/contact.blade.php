@@ -13,56 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Data</title>
     <!-- Add CSS for styling -->
-  <style>
-        /* Add custom styles here */
-        .table-container {
-    max-width: 100%;
-    overflow-x: auto;
-    margin-left: 30%;
-    margin-right: 5%; /* Optional: Add right margin if needed */
-    margin-top: 2%; /* Optional: Add top margin if needed */
-    background-color: white;
-    border-radius: 10px;
-}
 
-.table {
-    width: 100%; /* Set width to 100% */
-}
-
-      
-        .navbar-wrapper {
-    height: auto !important;
-}
-
-.scroll-div {
-    max-height: calc(100vh - 56px); /* Adjust 56px according to your header height */
-    overflow-y: auto; /* Add scrollbar if content exceeds height */
-}
-
-
-.main-content {
-    min-height: calc(100vh - 56px); /* Adjust 56px according to your header height */
-}
-
-           @media (min-width: 768px) { /* Adjust this breakpoint as needed */
-        .main-content {
-            margin-left: 40%; 
-        }
-        .table-container {
-        margin-left: 25%;
-        margin-right: 5%; /* Optional: Add right margin if needed */
-        margin-top: 2%; /* Optional: Add top margin if needed */
-    }
-
-		.td {
-        min-width: 50px; /* Set a minimum width for table cells */
-        padding: 8px; /* Add padding to cells for spacing */
-        border: 1px solid #ddd; /* Add borders to cells */
-    }
-    }
-  
-
-    </style>
   <h2 style="text-align:center;">Contact-Data</h2>
                 <div class="table-container" style="background-color:white;border-radius:10px";>
                     <table class="table table-striped">
@@ -124,8 +75,54 @@
     color: inherit !important; /* Use the color defined in .pagination */
 }
 
-</style>
+  .table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    margin-left: 30%;
+    margin-right: 5%; /* Optional: Add right margin if needed */
+    margin-top: 2%; /* Optional: Add top margin if needed */
+    background-color: white;
+    border-radius: 10px;
+}
 
+.table {
+    width: 100%; /* Set width to 100% */
+}
+
+      
+        .navbar-wrapper {
+    height: auto !important;
+}
+
+.scroll-div {
+    max-height: calc(100vh - 56px); /* Adjust 56px according to your header height */
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
+}
+
+
+.main-content {
+    min-height: calc(100vh - 56px); /* Adjust 56px according to your header height */
+}
+
+           @media (min-width: 768px) { /* Adjust this breakpoint as needed */
+        .main-content {
+            margin-left: 40%; 
+        }
+        .table-container {
+        margin-left: 25%;
+        margin-right: 5%; /* Optional: Add right margin if needed */
+        margin-top: 2%; /* Optional: Add top margin if needed */
+    }
+
+		.td {
+        min-width: 50px; /* Set a minimum width for table cells */
+        padding: 8px; /* Add padding to cells for spacing */
+        border: 1px solid #ddd; /* Add borders to cells */
+    }
+    }
+  
+
+    </style>
 
 
 @section('style')

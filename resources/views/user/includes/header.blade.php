@@ -5,48 +5,137 @@
                <h5 class="text-dark text-uppercase mb-4" style="font-size: 24px; border-radius: 50%; padding: 10px 20px;">Discover Our Services</h5>
             </div>
         </div>
-        <div class="row" data-aos="fade-up">
-            <div class="col-sm-6 text-center text-lg-left"> <!-- Updated -->
-                <div class="services-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                    <i class="fas fa-newspaper newspaper-icon" alt="integrated-marketing" data-aos="zoom-in"></i>
-                    <h5 class="text-dark mb-3 mt-4 font-weight-medium">Journal Publication Support:</h5>
-                    <p style="font-size: 18px; font-family:math;color:#f51127; text-align: left;">Our experienced team is dedicated to guiding you through every step of the journal publication process. From manuscript preparation to submission, peer review, and final publication, we offer personalized assistance to ensure your work meets the highest standards of academic excellence.</p>
+        <div class="container">
+            <div class="row" data-aos="fade-up">
+                <div class="col-sm-6 text-center text-lg-left">
+                    <div class="service-container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="hover-overlay"></div>
+                        <div class="services-box">
+                            <i class="fas fa-newspaper newspaper-icon" alt="integrated-marketing" data-aos="zoom-in"></i>
+                            <h5 class="text-dark mb-3 mt-4 font-weight-medium">Journal Publication Support:</h5>
+                            <p style="font-size: 18px; font-family: math; color: #f51127; text-align: left;">Our experienced team is dedicated to guiding you through every step of the journal publication process. From manuscript preparation to submission, peer review, and final publication, we offer personalized assistance to ensure your work meets the highest standards of academic excellence.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-center text-lg-left">
+                    <div class="service-container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="hover-overlay"></div>
+                        <div class="services-box">
+                            <i class="fas fa-pencil-alt pencil-icon" data-aos="zoom-in"></i>
+                            <h6 class="text-dark mb-3 mt-4 font-weight-medium">Paper Writing Assistance</h6>
+                            <p style="font-size: 18px; font-family: math; color: blue; ">Struggling to articulate your research findings effectively? Our expert writers are here to help. Whether you need assistance with drafting a compelling abstract, refining your methodology, or polishing your language, we provide tailored support to help you communicate your ideas with clarity and precision.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-6 text-center text-lg-left"> <!-- Updated -->
-                <div class="services-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                    <i class="fas fa-pencil-alt pencil-icon" data-aos="zoom-in"></i>
-                    <h6 class="text-dark mb-3 mt-4 font-weight-medium">Paper Writing Assistance</h6>
-                    <p style="font-size: 18px; font-family:math;color:blue; text-align: left;">Struggling to articulate your research findings effectively? Our expert writers are here to help. Whether you need assistance with drafting a compelling abstract, refining your methodology, or polishing your language, we provide tailored support to help you communicate your ideas with clarity and precision.</p>
+            
+            <div class="row" data-aos="fade-up">
+                <div class="col-sm-6 text-center text-lg-left">
+                    <div class="service-container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="hover-overlay"></div>
+                        <div class="services-box">
+                            <i class="fas fa-book book-icon" data-aos="zoom-in"></i>
+                            <h6 class="text-dark mb-3 mt-4 font-weight-medium">Book Publishing Services</h6>
+                            <p style="font-size: 18px; font-family: math; color: #008088;">Ready to share your expertise with the world? Our book publishing services empower authors to transform their research into impactful publications. From manuscript editing and formatting to cover design and distribution, we offer end-to-end support to help you bring your book to life.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-center text-lg-left">
+                    <div class="service-container pb-lg-0" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="hover-overlay"></div>
+                        <div class="services-box">
+                            <i class="fas fa-chart-line chart-icon" data-aos="zoom-in"></i>
+                            <h5 class="text-dark mb-3 mt-4 font-weight-medium">Citation Increase Support</h5>
+                            <p style="font-size: 20px; font-family: math; color: #a4007b; ">Boosting your citation count is essential for increasing the visibility and impact of your research. Our team employs strategic techniques to enhance the discoverability of your work, including targeted promotion, networking opportunities, and citation tracking tools.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        
-        <div class="row" data-aos="fade-up">
-            <div class="col-sm-6 text-center text-lg-left"> <!-- Updated -->
-                <div class="services-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                    <i class="fas fa-book book-icon" data-aos="zoom-in"></i>
-                    <h6 class="text-dark mb-3 mt-4 font-weight-medium">Book Publishing Services</h6>
-                    <p style="font-size: 18px; font-family:math;color:#008088; text-align: left;">Ready to share your expertise with the world? Our book publishing services empower authors to transform their research into impactful publications. From manuscript editing and formatting to cover design and distribution, we offer end-to-end support to help you bring your book to life.</p>
-                </div>
-            </div>
-            <div class="col-sm-6 text-center text-lg-left"> <!-- Updated -->
-                <div class="services-box pb-lg-0" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                    <i class="fas fa-chart-line chart-icon" data-aos="zoom-in"></i>
-                    <h5 class="text-dark mb-3 mt-4 font-weight-medium">Citation Increase Support</h5>
-                    <p style="font-size: 18px; font-family:math;color:#a4007b; text-align: left;">Boosting your citation count is essential for increasing the visibility and impact of your research. Our team employs strategic techniques to enhance the discoverability of your work, including targeted promotion, networking opportunities, and citation tracking tools.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+<style>
+    .service-container {
+        background-color: white;
+        border-bottom: 8px solid maroon;
+        padding: 10px;
+        margin: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+        display: flex; /* Use flexbox */
+        flex-direction: column; /* Column layout */
+        justify-content: space-between; 
+        max-height:350px;
+        max-width: 450px;/* Space out content */
+    }
+
+    .services-box {
+        padding: 10px;
+        border-radius: 10px;
+        flex-grow: 1; /* Ensure even height */
+    }
+    
+    .newspaper-icon, .pencil-icon, .book-icon, .chart-icon {
+        font-size: 50px;
+        color: #f51127;
+    }
+    .services-box p {
+            padding-right:-35px;
+            margin-bottom: 5px; /* Reset margin to avoid additional spacing */
+        }
+    .text-dark {
+        color: #333;
+    }
+
+    .font-weight-medium {
+        font-weight: 500;
+    }
+
+    .hover-overlay {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(217, 2, 2);
+        transition: top 0.5s ease-in-out;
+        z-index: 2;
+        opacity: 0.1;
+    }
+
+    .service-container:hover .hover-overlay {
+        top: 0;
+    }
+
+    .card-body {
+        color: white;
+        position: relative;
+        z-index: 3;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+ 
+</style>
 <section class="our-process" id="about">
+    <div class="col-sm-12 text-center"> <!-- Updated -->
+        <h5 class="text-dark text-uppercase mb-4" style="font-size: 24px; border-radius: 50%; padding: 10px 20px;">OUR WORK PROCESS</h5>
+     </div>
     <div class="container">
         <div class="row">
             <div class="col-sm-6" data-aos="fade-up">
-                <h2 class="text-dark">Our work process</h2>
+                
                 <p style="font-size: 20px; line-height: 1.6; font-family:'Rubik';color:#ff1010;"> <!-- Adjust font size and line height as needed -->
                     Welcome to Scholarlypublishing, your comprehensive support platform for academic publishing and citation enhancement!
                 </p>
