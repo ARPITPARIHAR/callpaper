@@ -448,16 +448,7 @@
             <input type="file" id="galleys" name="galleys" class="file-input" style="border: 2px dashed #000000;" accept="application/pdf">
         </div>
     </div>
-    <div style="display: flex; justify-content: space-between;">
-        <div class="custom-form-group" style="width: 45%;">
-            <label for="issue">Issue:</label>
-            <input type="text" id="issue" name="issue" class="file-input" style="border: 2px dashed #000000;" accept="application/pdf" value="{{ old('issue') }}">
-        </div>
-        <div class="custom-form-group" style="width: 50%; margin-left: 20px;">
-            <label for="page">Page Number:</label>
-            <input type="text" id="page" name="page" class="file-input" style="border: 2px dashed #000000;" value="{{ old('page') }}">
-        </div>
-    </div>
+   
     <div class="button-container">
         <button type="submit" class="btn btn-primary">Save</button>
         <input type="reset" class="btn btn-primary" value="Cancel">
