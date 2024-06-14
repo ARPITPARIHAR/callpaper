@@ -58,8 +58,7 @@
           <th>Reference</th>
           <th>Author</th>
           <th>Galleys</th>
-          <th>Issue</th>
-          <th>Page</th>
+        
           <th>Action</th>
         </tr>
       </thead>
@@ -78,8 +77,7 @@
               <i class="fas fa-file-pdf"></i> {{ $form->galleys }}
             </a>
           </td>
-          <td>{{ $form->issue }}</td>
-          <td>{{ $form->page }}</td>
+         
           <td>
             <form action="{{ route('destroy.form', ['id' => $form->id]) }}" method="POST">
               @csrf

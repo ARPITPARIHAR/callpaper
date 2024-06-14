@@ -54,8 +54,7 @@ class FormController extends Controller
             return redirect()->back()->withInput()->with('error', 'Please upload a PDF file for galleys.');
         }
     
-        $form->issue = $request->issue;
-        $form->page = $request->page;
+       
     
         $form->save();
     
