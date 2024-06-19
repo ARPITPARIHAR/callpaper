@@ -28,7 +28,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="row" data-aos="fade-up">
                 <div class="col-sm-6 text-center text-lg-left">
                     <div class="service-container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
@@ -82,7 +82,7 @@
         overflow: hidden;
         display: flex; /* Use flexbox */
         flex-direction: column; /* Column layout */
-        justify-content: space-between; 
+        justify-content: space-between;
         max-height:350px;
         max-width: 450px;/* Space out content */
     }
@@ -92,7 +92,7 @@
         border-radius: 10px;
         flex-grow: 1; /* Ensure even height */
     }
-    
+
     .newspaper-icon, .pencil-icon, .book-icon, .chart-icon {
         font-size: 50px;
         color: #f51127;
@@ -136,7 +136,7 @@
         flex-wrap: wrap;
     }
 
- 
+
 </style>
 <section class="our-process" id="about">
     <div class="col-sm-12 text-center"> <!-- Updated -->
@@ -145,7 +145,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6" data-aos="fade-up">
-                
+
                 <p style="font-size: 20px; line-height: 1.6; font-family:'Rubik';color:#ff1010;"> <!-- Adjust font size and line height as needed -->
                     Welcome to Scholarlypublishing, your comprehensive support platform for academic publishing and citation enhancement!
                 </p>
@@ -225,7 +225,7 @@
 </section>
 
 
-   
+
 {{-- <section class="testimonial" id="testimonial">
     <div class="container">
         <div class="row  mt-md-0 mt-lg-4">
@@ -392,18 +392,18 @@
     <div class="row">
         <div class="col-md-3">
             <img src="images/paper.png" alt="contact" class="img-fluid" style="margin-top:200px;">
-       
+
         </div>
         <div class="col-md-9">
-            
-           
+
+
                 <h4 style="text-align: center;">Submit Your Article</h4>
      <!-- Your Blade view file -->
 \<!-- Your Blade view file -->
 
 @if ($errors->any())
     <script>
-        alert(" Error: Please upload only pdf file in galleys field.");
+        alert("Error: Please upload only pdf, docx, or doc files in the galleys field.");
     </script>
 @endif
 
@@ -445,7 +445,7 @@
         </div>
         <div class="custom-form-group" style="width: 50%; margin-left: 20px;">
             <label for="galleys">Galleys:</label>
-            <input type="file" id="galleys" name="galleys" class="file-input" style="border: 2px dashed #000000;" accept="application/pdf">
+            <input type="file" id="galleys" name="galleys" class="file-input" style="border: 2px dashed #000000;" accept="application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document">
         </div>
     </div>
    
@@ -454,6 +454,7 @@
         <input type="reset" class="btn btn-primary" value="Cancel">
     </div>
 </form>
+
 
             </div>
         </div>
@@ -480,14 +481,14 @@
                         <div class="col-sm-6 aos-animate" data-aos="zoom-in" data-aos-offset="-100">
                             <div class="contact-info-container" style="background-color:#f51127; border-radius: 15px; padding: 20px;">
                                 <p class="mb-0">
-                                    <i class="fas fa-phone-alt mr-2 call"></i> 
+                                    <i class="fas fa-phone-alt mr-2 call"></i>
                                     <span class="phone-number" style="color: #fff107;">+91 9901791930</span>
                                     <a href="mailto:globaljournalpublication@gmail.com" class="email-address" style="color: #fff;"><i class=""></i> globaljournalpublication@gmail.com</a>
                                 </p>
                             </div>
                         </div>
- 
- 
+
+
 
                 <form method="POST" action="{{ route('submit.form') }}" id="your-form-id">
                     @csrf
@@ -521,7 +522,7 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
-           
+
         </div>
     </div>
 </section>
@@ -569,7 +570,7 @@
 
 
     .border {
-  
+
 }
 /* Hide the default file input text */
 /* Hide the default file input text */
