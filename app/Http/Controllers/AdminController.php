@@ -20,26 +20,33 @@ class AdminController extends Controller
         return view('admin.dashboard');
     }
 
+    public function viewPDF($id)
+    {
+        $form = Form::findOrFail($id); // Assuming your Form model has primary key 'id'
 
-public function viewPDF($id)
-{
-    $form = Form::findOrFail($id); // Assuming your Form model has primary key 'id'
-    
-    // Assuming 'galleys' column stores PDF file names
-    $pdfFileName = $form->galleys;
-    
-    // Check if the file exists
-    if ($pdfFileName && file_exists(public_path('galleys/' . $pdfFileName))) {
-        // Get the full path to the PDF file
-        $filePath = public_path('galleys/' . $pdfFileName);
-        
-        // Return the file as a response
-        return response()->file($filePath);
-    } else {
-        // Handle file not found error
-        return redirect()->back()->with('error', 'PDF file not found.');
+        // Retrieve the file name from the database (assuming it's stored in 'galleys' column)
+        $fileName = $form->galleys;
+
+        // Check if the file exists in the 'public/galleys' directory
+        if ($fileName && file_exists(public_path('galleys/' . $fileName))) {
+            // Generate a URL using the asset helper function
+            $fileUrl = asset('galleys/' . $fileName);
+
+            // Pass other necessary variables to your view
+            $title = $form->title;
+            $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION); // Determine the file extension
+
+            // Return the view with necessary data
+            return view('user.pdf_viewer', [
+                'fileUrl' => $fileUrl,
+                'fileType' => $fileExtension, // This determines how to handle the file in the view
+                'title' => $title,
+            ]);
+        } else {
+            // Handle file not found error
+            return redirect()->back()->with('error', 'File not found.');
+        }
     }
-}
 
 
 

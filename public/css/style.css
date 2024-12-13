@@ -12491,7 +12491,7 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
- 
+
 }
 
 .navbar > .container,
@@ -18485,8 +18485,8 @@ h6, .h6 {
 
 .navbar .navbar-nav .nav-item .nav-link {
   color: #fff;
-  font-size: 0.937rem;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 100;
   padding: 0.625rem 1.25rem;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
